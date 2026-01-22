@@ -1,0 +1,70 @@
+/* --------------------
+-----------------------
+-----------------------
+CSS TABLE OF CONTENTS
+
+# GLOBAL STYLING
+    # Global Resets
+    # Global Colors
+    # Global Typography
+# LAYOUT
+    # Grid
+# STRUCTURE
+    # Header
+    # Main Sections
+    # Footer
+
+-----------------------
+-----------------------
+-------------------- */
+
+/* GLOBAL STYLING */
+
+/* Global Resets */
+
+ * {box-sizing: border-box;}
+body {margin: 0;}
+
+/* Global Colors */
+
+body {
+    /* SET THE BACKGROUND COLOR OF ALL PAGES */
+    background-color: #ddd;
+
+    /* SET THE MAIN TEXT COLOR OF ALL PAGES */
+    color: rgb(0 0 0 / .8);
+
+}
+
+/* SET THE COLOR OF ALL HEADINGS */
+    h1, h2, h3 {
+        color: rgb(0 0 0 / 1)
+    }
+
+/* Global Typography */
+
+/* SET THE MAIN BODY FONT */
+body {
+    font-family: system-ui, Helvetica, Arial, sans-serif;
+    /* Set font size 100% = 1em = 1px */
+    font-size: 100%;
+}
+
+/* SET THE FONT FOR ALL HEADINGS */
+h1, h2, h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* SITE STRUCTURE */
+
+.site-header {
+    background-color: white;
+    padding: 1em;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #9f9f9f;
+    padding: 3em 1em;
+    text-align: center;
+}
