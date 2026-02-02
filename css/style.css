@@ -28,7 +28,7 @@ body { margin: 0; }
 
 /* GLOBAL COLORS */
 body { color: rgba(0, 0, 0, 0.8); }
-a { color: rgba(42, 126, 210, 1); }
+a { color: rgba(0, 175, 193, 1); }
 a:hover { color: rgba(0, 51, 153, 1); }
 
 /* GLOBAL TYPOGRAPHY */
@@ -42,7 +42,7 @@ body {
 /* SITE STRUCTURE */
 
 header {
-    background-color: rgb(42, 126, 210);
+    background-color: rgba(0, 175, 193, 1);
     color: rgba(0, 0, 0, 0.8); 
     padding: 1em;
     display: grid;
@@ -81,14 +81,15 @@ header a:hover {
 
 /* MAIN */
 main {
-    background: rgba(0,0,0,.05);
+    background: rgba(0, 175, 193, 0.05);
 }
 
 /* HERO SECTION */
 .hero {
-    background-color: rgba(42, 126, 210, 1);
+    background-color: rgba(0, 175, 193, 1);
     text-align: center;
-    color: white;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
     padding: 6em 1em;
 }
 
@@ -124,7 +125,7 @@ main {
 
 /* FOOTER */
 footer {
-    border-top: 1px solid rgba(0,0,0,.05);
+    border-top: 1px solid rgba(0, 0, 0, 0.0.05);
     padding: 1em;
 }
 
@@ -181,7 +182,7 @@ aside {
 /* SUBPAGE STYLES */
 
 .page-sub .hero {
-    background-color: rgba(0,0,0,.1);
+    background-color: rgba(0, 175, 193, 0.1);
     color: rgba(0,0,0,.8);
 }
 
@@ -224,6 +225,22 @@ dt {
 }
 dd {
     margin: 0;
+}
+
+/* CUSTOM HOME PAGE STYLING */
+.page-home header {
+    position: absolute;
+    width: 100%;
+    background-color: transparent;
+}
+
+.page-home .hero {
+    background-image: url('../img/aquarium.jpg');
+    background-position: center-top;
+    background-size: cover;
+    padding: 30vh 1em 20vh 1em;
+    background-color: rgba(0, 79, 88, 0.25);
+    background-blend-mode: overlay;
 }
 
 /* FOR DEV PURPOSES */
