@@ -153,8 +153,17 @@ aside {
         border-right: 1px solid rgba(0, 0, 0, 0.1);
         margin: 0 3em 2em 0;
         padding: .3em 2em 0 0;
+        position: sticky;
+        top: 0;
+        max-height: 100vh;
+        overflow-y: auto;
     }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 .two-col-sidebar {
     display: grid;
 }
