@@ -1,0 +1,77 @@
+/* #BASE CSS (Initital Setup)
+---------------------------------
+    #GLOBAL SETTINGS
+        # GLOBAL VARIABLES
+        # GLOBAL RESETS
+        # GLOBAL COLORS
+    #BASE CONTENT
+        #TYPOGRAPHY
+            #BODY
+            #HEADINGS
+            #PARAGRAPHS
+            #LINKS
+        #HELPERS
+        #MEDIA
+            #IMAGES
+            #VIDEO
+        #COMPONENTS
+            #BUTTONS
+    #BASE LAYOUT
+        #CONTAINER
+        #MEDIA QUERIES
+        #GRID SYSTEM
+    #BASE SITE
+        #SITE STRUCTURE
+            #HEADER
+                # site-logo (LOGO)
+            #SITE NAVIGATION
+                # toggle-nav (Default for Small Screens)
+            #FOOTER
+            #SECTIONS
+            #SUB PAGES
+                #...
+--------------------------------- */
+/* ----------------------------- */
+/* ----- GLOBAL STYLING -------- */
+/* ----------------------------- */
+/* ----- SET GLOBAL VARIABLES ----- */
+:root {
+    /* BASE COLORS */
+    --color-body-background: rgb(255, 255, 255);
+    --color-text-body: rgba(0,0,0,0.8);
+    --color-text-headings: rgba(0,0,0,1);
+    --color-links: #003366;
+    --color-links-hover: #000033;
+
+    /* BASE TYPOGRAPHY */
+    --font-body: system-ui, Helvetica, Arial, sans-serif;
+    --font-headings: system-ui, Helvetica, Arial, sans-serif;
+}
+
+/* GLOBAL RESETS */
+
+/* CHANGE BOX-SIZING FOR ALL TO BORDER-BOX */
+* { box-sizing: border-box; }
+
+/* REMOVE MARGIN ON BODY */
+body { margin: 0; }
+
+/* ENABLE SMOOTH SCROLLING */
+html { scroll-behavior: smooth; }
+
+/* GLOBAL COLORS */
+
+    /* SET BODY BACKGROUND COLOR */
+    body {
+        background-color: var(--color-body-background);
+    }
+
+    /* SET BODY TEXT COLOR */
+    body {
+        color: var(--color-text-body);
+    }
+
+    /* SET HEADING TEXT COLOR */
+    h1, h2, h3, h4, h5, h6 {
+        color: var(--color-text-headings);
+    }
