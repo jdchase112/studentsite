@@ -125,7 +125,7 @@ main {
 
 /* FOOTER */
 footer {
-    border-top: 1px solid rgba(0, 0, 0, 0.0.05);
+    border-top: 1px solid rgba(0 0 0 / .05);
     padding: 1em;
 }
 
@@ -245,7 +245,7 @@ dd {
 
 .page-home .hero {
     background-image: url('../img/aquarium.jpg');
-    background-position: center-top;
+    background-position: center top;
     background-size: cover;
     padding: 30vh 1em 20vh 1em;
     background-color: rgba(0, 79, 88, 0.25);
