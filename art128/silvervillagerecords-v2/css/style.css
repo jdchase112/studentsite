@@ -278,26 +278,20 @@ img {
         margin-block: calc(var(--gridgap) * 0.5);
     }
 
-    @media (width > 768px) {
-        .row {
+@media (width > 768px) {
+    .row {
         display: flex;
         gap: var(--gridgap);
-        }
-
-        .row .one-whole {width: 100%;}
-        .row .one-half {width: calc(50% - var(--gridgap) * .5);}
-        .row .one-third {width: calc(33.3333% - var(--gridgap) * .6666);}
-        .row .two-thirds {width: calc(66.6666% - var(--gridgap) * 0.3333);}
-        .row .one-fourth {width: calc(25% - var(--gridgap) * .75);}
-        .row .three-fourths {width: calc(75% - var(--gridgap) * 0.25);}
     }
 
-    .grid-demo .column {
-        background-color: #ddd;
-        padding: 1em;
-    }
+    .row .one-whole {width: 100%;}
+    .row .one-half {width: calc(50% - var(--gridgap) * .5);}
+    .row .one-third {width: calc(33.3333% - var(--gridgap) * .6666);}
+    .row .two-thirds {width: calc(66.6666% - var(--gridgap) * 0.3333);}
+    .row .one-fourth {width: calc(25% - var(--gridgap) * .75);}
+    .row .three-fourths {width: calc(75% - var(--gridgap) * 0.25);}
 
-  /* SWAPPED COLUMNS */
+    /* SWAPPED COLUMNS */
     .row.swapped {
         flex-direction: row-reverse;
     }
@@ -311,7 +305,7 @@ img {
         justify-content: center;
     }
 
-/* BONUS */
+    /* BONUS */
 
     /* 12 COLUMN GRID SYSTEM */
 
@@ -328,23 +322,32 @@ img {
     .row .col-11 {width: calc(91.6666% - var(--gridgap) * 0.0833);}
     .row .col-12 {width: 100%;}
 
-    /* TWO COLUMN LAYOUT FOR SMALL SCREENS */
-        @media (width < 768px) {
-            .row:has(.two-col-mobile) {
-            display: flex;
-            gap: var(--gridgap);
-        }
+
+}
+
+/* TWO COLUMN LAYOUT FOR SMALL SCREENS */
+@media (width < 768px) {
+    .row:has(> .two-col-mobile) {
+        display: flex;
+        gap: var(--gridgap);
+    }
 
     .row .two-col-mobile {
         width: calc(50% - var(--gridgap) * 0.5);
     }
 }    
-    /* FOR GRID DEMO PURPOSES ONLY */
-        .grid-demo .row > * {
-        background-color: #ddd;
-        padding: 1em;
-        text-align: center;
-        }
+
+/* FOR GRID DEMO PURPOSES ONLY */
+.grid-demo .row > * {
+    background-color: #ddd;
+    padding: 1em;
+    text-align: center;
+}
+
+.grid-demo .column {
+    background-color: #ddd;
+    padding: 1em;
+}
 
 /* ---------------------------- */
 /* ------ BASE STRUCTURE ------ */
@@ -540,6 +543,9 @@ img {
     .hero h1 {
         font-size: 4em;
         color: white;
+        font-family: aktiv-grotesk-extended, sans-serif;
+        font-weight: 800;
+        font-style: normal;
     }
 
     .hero h2 {
@@ -587,16 +593,54 @@ img {
     padding-block: 2em;
     h2, h3 {
         margin-block-end: 1em;
+        font-family: aktiv-grotesk-extended, sans-serif;
+        font-weight: 800;
+        font-style: normal;
     }
+    
 }
 
 /* USED MUSIC SECTION STYLING */
 
 #used-music {
+
     padding-block: 2em;
-    h2, h3 {
+
+    /* TEMP FIX FOR EQUAL HEIGHT ALBUMS */
+    .one-half {
+        min-height: 21em;
+    }
+
+    h2 {
+        margin-block-end: 0.5em;
+        font-family: aktiv-grotesk-extended, sans-serif;
+        font-weight: 800;
+        font-style: normal;
+    }
+
+    h3 {
         margin-block-end: 1em;
     }
+
+    /* SET FIXED GRID GAP */
+
+    /* .row {
+        --gridgap: 40px;
+    } */
+
+    /* ENABLE TWO COLUMN LAYOUT FOR NESTED ROWS ON SMALL SCREENS */
+
+    @media (width < 768px) {
+    .row .row {
+        display: flex;
+        gap: var(--gridgap);
+    }
+
+    .row .row .one-half {
+        width: calc(50% - var(--gridgap) * 0.5);
+    }
+}    
+
 }
 
 /* GENRES SECTION STYLING */
@@ -608,22 +652,43 @@ img {
     h2, h3 {
         color: white;
         margin-block-end: 1em;
+        font-family: aktiv-grotesk-extended, sans-serif;
+        font-weight: 800;
+        font-style: normal;
     }
     .button {
         margin: 0.5em;
     }
+
+    a {
+        color: white;
+    }
+
+    toggle-tabs {
+        --toggle-tab-border-color: rgb(255, 255, 255);
+    }
+
+    #myCarousel-rock .f-carousel__slide {
+        width: 25%;
+        margin-inline: 40px;
+        background: red;
+    }
+
 }
 
 /*VINYL CARE SECTION STYLING */
 
 #vinyl-care {
-    background-color: #151515;
+    background-color: #171717;
     color: white;
     padding-block: 2em;
     h2, h3 {
         color: white;
         text-align: center;
         margin-block-end: 1em;
+        font-family: aktiv-grotesk-extended, sans-serif;
+        font-weight: 800;
+        font-style: normal;
     }
 }
 
@@ -637,13 +702,18 @@ img {
         color: #153236;
         text-align: center;
         margin-block-end: 1em;
+        font-family: aktiv-grotesk-extended, sans-serif;
+        font-weight: 800;
+        font-style: normal;
     }
 }
 
 /* FOOTER SECTION STYLING */
 
 .site-footer {
-    a {color: white;}
+    a {
+        color: white;
+    }
 }
 
 #site-footer {

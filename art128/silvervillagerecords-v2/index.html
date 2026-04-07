@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<link href="css/style.css" rel="stylesheet" type="text/css">
-
-<!-- ADOBE FONTS -->
-
-<link rel="stylesheet" href="https://use.typekit.net/btm2lts.css">
-
-<!-- GOOGLE FONTS -->
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&display=swap" rel="stylesheet">
 
 <head>
     <meta charset="UTF-8">
     <title>Silver Village Records</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ADOBE FONTS -->
+
+    <link rel="stylesheet" href="https://use.typekit.net/btm2lts.css">
+
+    <!-- GOOGLE FONTS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&display=swap" rel="stylesheet">
+
+    /* FANCYAPPS CAROUSEL */
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/carousel/carousel.css"
+    />
+
+    <link href="css/style.css" rel="stylesheet" type="text/css">
 
 </head>
 <body>
@@ -215,6 +222,38 @@
 
     <h2>BROWSE BY GENRE</h2>
 
+    <!-- Toggle Tabs Web Component from Chris Ferdinandi: https://gomakethings.com/snippets/web-components/toggle-tabs/ -->
+
+    <link rel="stylesheet" href="components/toggle-tabs/toggle-tabs.css">
+
+    <toggle-tabs>
+      <ul tabs> 
+        <li><a href="#rock">Rock</a></li>
+        <li><a href="#hip-hop">Hip-Hop</a></li>
+        <li><a href="#r-b">R&B</a></li>
+      </ul>
+
+      <div id="rock">
+        <div class="f-carousel" id="myCarousel-rock">
+          <div class="f-carousel__viewport">
+            <div class="f-carousel__slide">1</div>
+            <div class="f-carousel__slide">2</div>
+            <div class="f-carousel__slide">3</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="hip-hop">
+        Hip-Hop slider goes here...
+      </div>
+
+      <div id="r-b">
+        R&B slider goes here...
+      </div>
+    </toggle-tabs>
+
+    <script src="components/toggle-tabs/toggle-tabs.js"></script>
+
     <div class="row centered">
 
       <div class="two-thirds text-centered">
@@ -369,6 +408,19 @@
   </div>
 
 </footer>
+
+/* FANCYAPPS CAROUSEL */
+
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/carousel/carousel.umd.js"></script>
+
+<script>
+const container = document.getElementById("myCarousel-rock");
+const options = {
+  // Your custom options
+  slidesPerPage: 2
+};
+
+Carousel(container, options).init();</script>
 
 <script src="js/script.js"></script>
 
