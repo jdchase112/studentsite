@@ -23,7 +23,7 @@ toggle-tabs [role="tablist"] li {
   padding: .5em;
 }
 
-toggle-tabs div[id] {
+toggle-tabs > div[id] {
   border-left: 1px solid var(--toggle-tab-border-color);
   border-right: 1px solid var(--toggle-tab-border-color);
   border-bottom: 1px solid var(--toggle-tab-border-color);

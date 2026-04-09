@@ -16,11 +16,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&display=swap" rel="stylesheet">
 
-    /* FANCYAPPS CAROUSEL */
+    <!-- FANCYAPPS CAROUSEL -->
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/carousel/carousel.css"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/carousel/carousel.arrows.css"
+    /> 
 
     <link href="css/style.css" rel="stylesheet" type="text/css">
 
@@ -231,20 +237,83 @@
         <li><a href="#rock">Rock</a></li>
         <li><a href="#hip-hop">Hip-Hop</a></li>
         <li><a href="#r-b">R&B</a></li>
+        <li><a href="#electronic">Electronic</a></li>
+        <li><a href="#jazz">Jazz</a></li>
+        <li><a href="#pop">Pop</a></li>
+        <li><a href="#country">Country</a></li>
+        <li><a href="#metal">Metal</a></li>
+
       </ul>
 
       <div id="rock">
         <div class="f-carousel" id="myCarousel-rock">
           <div class="f-carousel__viewport">
-            <div class="f-carousel__slide">1</div>
-            <div class="f-carousel__slide">2</div>
-            <div class="f-carousel__slide">3</div>
+
+            <div class="f-carousel__slide">
+
+              <div class="album-card">
+                <img src="img/My Bloody Valentine - Loveless.webp" alt="My Bloody Valentine - Loveless" width="600" height="600">
+
+                <p>My Bloody Valentine</p>
+                <p><strong>Loveless</strong></p>
+                <p>12" Vinyl, CD</p>
+              </div>
+
+            </div>
+
+            <div class="f-carousel__slide">
+
+              <div class="album-card">
+                <img src="img/At the Drive-In - Relationship of Command.webp" alt="At the Drive-In - Relationship of Command" width="600" height="600">
+
+                <p>At the Drive-In</p>
+                <p><strong>Relationship of Command</strong></p>
+                <p>12" Vinyl, CD</p>
+              </div>
+
+            </div>
+
+            <div class="f-carousel__slide">
+
+              <div class="album-card">
+                <img src="img/Ramones - Leave Home.webp" alt="Ramones - Leave Home" width="600" height="600">
+
+                <p>Ramones</p>
+                <p><strong>Leave Home</strong></p>
+                <p>12" Vinyl, CD</p>
+              </div>
+
+            </div>
+
           </div>
         </div>
       </div>
 
       <div id="hip-hop">
-        Hip-Hop slider goes here...
+        <div class="f-carousel" id="myCarousel">
+          <div class="f-carousel__viewport">
+            <div class="f-carousel__slide">
+
+              <div class="album-card">
+                <img src="img/Wu-Tang Clan - Enter the Wu-Tang (36 Chambers).webp" alt="Wu-Tang Clan - Enter the Wu-Tang (36 Chambers)" width="600" height="600">
+
+                <p>Wu-Tang Clan</p>
+                <p><strong>Enter the Wu-Tang (36 Chambers)</strong></p>
+                <p>12" Vinyl, CD</p>
+              </div>
+
+            </div>
+            
+            <div class="f-carousel__slide">2</div>
+            <div class="f-carousel__slide">3</div>
+            <div class="f-carousel__slide">2</div>
+            <div class="f-carousel__slide">3</div>
+            <div class="f-carousel__slide">2</div>
+            <div class="f-carousel__slide">3</div>
+            <div class="f-carousel__slide">2</div>
+            <div class="f-carousel__slide">3</div>
+          </div>
+        </div>
       </div>
 
       <div id="r-b">
@@ -277,41 +346,52 @@
     <div class="row">
 
         <div class="one-fourth">
-          <img src="img/Wu-Tang Clan - Enter the Wu-Tang (36 Chambers).webp" alt="Wu-Tang Clan - Enter the Wu-Tang (36 Chambers)" width="600" height="600">
 
-          <p>Wu-Tang Clan</p>
-          <p><strong>Enter the Wu-Tang (36 Chambers)</strong></p>
-          <p>12" Vinyl, CD</p>
+          <div class="album-card">
+            <img src="img/Wu-Tang Clan - Enter the Wu-Tang (36 Chambers).webp" alt="Wu-Tang Clan - Enter the Wu-Tang (36 Chambers)" width="600" height="600">
+
+            <p>Wu-Tang Clan</p>
+            <p><strong>Enter the Wu-Tang (36 Chambers)</strong></p>
+            <p>12" Vinyl, CD</p>
+          </div>
+
         </div>
 
         <div class="one-fourth">
-          <img src="img/MF DOOM - Operation Doomsday.webp" alt="MF DOOM - Operation Doomsday" width="600" height="600">
+          <div class="album-card">
+            <img src="img/MF DOOM - Operation Doomsday.webp" alt="MF DOOM - Operation Doomsday" width="600" height="600">
 
-          <p>MF DOOM</p>
-          <p><strong>Operation Doomsday</strong></p>
-          <p>12" Vinyl, CD</p>
+            <p>MF DOOM</p>
+            <p><strong>Operation Doomsday</strong></p>
+            <p>12" Vinyl, CD</p>
+          </div>
+
         </div>
 
         <div class="one-fourth">
-          <img src="img/Three 6 Mafia - Most Known Unknown.webp" alt="Three 6 Mafia - Most Known Unknown" width="600" height="600">
+          
+          <div class="album-card">
+            <img src="img/Three 6 Mafia - Most Known Unknown.webp" alt="Three 6 Mafia - Most Known Unknown" width="600" height="600">
 
-          <p>Three 6 Mafia</p>
-          <p><strong>Most Known Unknown</strong></p>
-          <p>12" Vinyl, CD</p>
+            <p>Three 6 Mafia</p>
+            <p><strong>Most Known Unknown</strong></p>
+            <p>12" Vinyl, CD</p>
+          </div>
         </div>
 
         <div class="one-fourth">
+
+          <div class="album-card">
           <img src="img/DJ Screw - Bigtyme Vol II All Screwed Up.webp" alt="DJ Screw - Bigtyme Vol II All Screwed Up" width="600" height="600">
 
           <p>DJ Screw</p>
           <p><strong>Bigtyme Vol II All Screwed Up</strong></p>
           <p>12" Vinyl, CD</p>
+          </div>
         </div>
-
       </div>
-
+    </div>
   </div>
-
 </div>
 
 <div class="section" id="vinyl-care">
@@ -323,26 +403,35 @@
     <div class="row">
 
       <div class="one-third">
-        <img src="img/vinylspray.webp" alt="Placeholder Image" width="600" height="600">
 
-        <p><strong>4oz Record Cleaning Fluid</strong></p>
-        <p>$12.95</p>
+        <div class="album-card">
+          <img src="img/vinylspray.webp" alt="Placeholder Image" width="600" height="600">
 
-      </div>
-
-      <div class="one-third">
-        <img src="img/vinylbrush.avif" alt="Placeholder Image" width="600" height="600">
-
-        <p><strong>Anti-Static Record Brush</strong></p>
-        <p>$16.95</p>
+          <p><strong>4oz Record Cleaning Fluid</strong></p>
+          <p>$12.95</p>
+        </div>
 
       </div>
 
       <div class="one-third">
-        <img src="img/washer.webp" alt="Placeholder Image" width="600" height="600">
 
-        <p><strong>Deep Groove Record Washer</strong></p>
-        <p>$79.95</p>
+        <div class="album-card">
+          <img src="img/vinylbrush.avif" alt="Placeholder Image" width="600" height="600">
+
+          <p><strong>Anti-Static Record Brush</strong></p>
+          <p>$16.95</p>
+        </div>
+
+      </div>
+
+      <div class="one-third">
+
+        <div class="album-card">
+          <img src="img/washer.webp" alt="Placeholder Image" width="600" height="600">
+
+          <p><strong>Deep Groove Record Washer</strong></p>
+          <p>$79.95</p>
+        </div>
 
       </div>
 
@@ -392,35 +481,40 @@
 
     <div class="row col-6 centered">
   
-      <a href="#">Home</a></li>
+      <a href="#">HOME</a></li>
 
-      <a href="#new-releases">New Releases</a></li>
+      <a href="#new-releases">NEW RELEASES</a></li>
 
-      <a href="#used-music">Used Music</a></li>
+      <a href="#used-music">USED MUSIC</a></li>
 
-      <a href="#genres">Genres</a></li>
+      <a href="#genres">GENRES</a></li>
 
-      <a href="#vinyl-care">Vinyl Care</a></li>
+      <a href="#vinyl-care">VINYL CARE</a></li>
 
-      <a href="#about">About Us</a></li>
+      <a href="#about">ABOUT US</a></li>
 
     </div>  
   </div>
 
 </footer>
 
-/* FANCYAPPS CAROUSEL */
+<!-- FANCYAPPS CAROUSEL -->
 
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/carousel/carousel.umd.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/carousel/carousel.arrows.umd.js"></script>
 
 <script>
 const container = document.getElementById("myCarousel-rock");
 const options = {
   // Your custom options
-  slidesPerPage: 2
+  center: false,
 };
+const plugins = { Arrows };
 
-Carousel(container, options).init();</script>
+Carousel(container, options, plugins).init();
+
+</script>
 
 <script src="js/script.js"></script>
 
