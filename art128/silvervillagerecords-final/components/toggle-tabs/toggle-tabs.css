@@ -1,0 +1,54 @@
+/* Modified Toggle Tabs Web Component from Chris Ferdinandi: https://gomakethings.com/snippets/web-components/toggle-tabs/ */
+
+toggle-tabs {
+  --toggle-tab-border-color: transparent;
+}
+
+toggle-tabs [role="tablist"] {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--toggle-tab-border-color);
+}
+
+toggle-tabs [role="tablist"] li {
+  display: inline-block;
+  border-top: 1px solid var(--toggle-tab-border-color);
+  border-left: 1px solid var(--toggle-tab-border-color);
+  border-right: 1px solid var(--toggle-tab-border-color);
+  border-bottom: 1px solid var(--toggle-tab-border-color);
+  margin-bottom: -1px;
+  margin-right: -1px;
+  padding: .5em;
+}
+
+toggle-tabs>div[id] {
+  border-left: 1px solid var(--toggle-tab-border-color);
+  border-right: 1px solid var(--toggle-tab-border-color);
+  border-bottom: 1px solid var(--toggle-tab-border-color);
+  padding: .5em;
+}
+
+toggle-tabs [role="tab"] {
+  color: currentColor;
+  text-decoration: none;
+}
+
+toggle-tabs [role="tab"]:active {
+  /* 	background-color: #f7f7f7; */
+  color: currentColor;
+  text-decoration: none;
+}
+
+toggle-tabs [role="tab"][aria-selected="true"] {
+  /* 	background-color: #e5e5e5; */
+  text-decoration: none;
+  color: currentColor;
+  /*   font-weight: bold; */
+}
+
+toggle-tabs li:has([role="tab"][aria-selected="true"]) {
+  border-bottom: 1px solid white;
+}
