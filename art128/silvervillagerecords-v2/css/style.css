@@ -625,6 +625,7 @@ section {
 /* HERO SECTION STYLING */
 .hero {
     padding-inline: 1em;
+    padding: 7em;
     text-align: center;
     background-color: #3F879C;
     background-image: url(../img/hero-background.jpg);
@@ -632,6 +633,11 @@ section {
     background-position: center center;
     color: white;
     font-weight: 800 px;
+
+}
+
+.hero img {
+    filter: blur(50px);
 }
 
 .hero h1 {
@@ -743,6 +749,7 @@ section {
     }
 
     h2 {
+        margin-block-start: 0.15em;
         margin-block-end: 1em;
         font-family: aktiv-grotesk, sans-serif;
         font-weight: 800;
@@ -752,6 +759,16 @@ section {
 
     h3 {
         margin-block-end: 0.5em;
+    }
+
+    .used-eyebrow {
+        font-size: 1em;
+        text-align: right;
+        margin-block-start: 1em;
+        margin-block-end: 0.1em;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #606060;
     }
 
     .row {
@@ -835,10 +852,20 @@ section {
     h2,
     h3 {
         color: white;
+        margin-block-start: 0.15em;
         margin-block-end: 1.25em;
         font-family: aktiv-grotesk, sans-serif;
         font-weight: 800;
         font-style: normal;
+    }
+
+    .genre-eyebrow {
+        font-size: 1em;
+        margin-block-start: 1em;
+        margin-block-end: 0.1em;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #8f8f8f;
     }
 
     .button {
@@ -981,10 +1008,21 @@ section {
     h3 {
         color: white;
         text-align: center;
+        margin-block-start: 0.15em;
         margin-block-end: 1.75em;
         font-family: aktiv-grotesk, sans-serif;
         font-weight: 800;
         font-style: normal;
+    }
+
+    .vinyl-care-eyebrow {
+        text-align: center;
+        font-size: 1em;
+        margin-block-start: 1.5em;
+        margin-block-end: 0.1em;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #afafaf;
     }
 
     .box {
@@ -1020,7 +1058,7 @@ section {
     background-image: url(../img/aboutus-background.png);
     color: #23545A;
     padding-block: 4em;
-    padding-block-end: 4.5em;
+    padding-block-end: 3em;
 
     h2,
     h3 {
@@ -1078,4 +1116,8 @@ section {
 .album-card p {
     margin: 0;
     margin-block-start: 0.25em;
+}
+
+.album-card p:first-of-type {
+    margin-block-start: 0.5em;
 }
