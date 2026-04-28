@@ -406,11 +406,61 @@ body {
         width: 100%;
     }
 
+    /* PUSHES */
+
+    .row .push-1 {
+        margin-left: calc(8.3333% + var(--gridgap) * 0.909);
+    }
+
+    .row .push-2 {
+        margin-left: calc(16.6666% + var(--gridgap) * 0.8333);
+    }
+
+    .row .push-3 {
+        margin-left: calc(25% + var(--gridgap) * 0.75);
+    }
+
+    .row .push-4 {
+        margin-left: calc(33.3333% + var(--gridgap) * 0.6666);
+    }
+
+    .row .push-5 {
+        margin-left: calc(41.6666% + var(--gridgap) * 0.5833);
+    }
+
+    .row .push-5-one-half {
+        margin-left: calc(45.8333% + var(--gridgap) * 0.5416);
+    }
+
+    .row .push-6,
+    .row .push-one-half {
+        margin-left: calc(50% + var(--gridgap) * 0.5);
+    }
+
+    .row .push-7 {
+        margin-left: calc(58.3333% + var(--gridgap) * 0.4166);
+    }
+
+    .row .push-8 {
+        margin-left: calc(66.6666% + var(--gridgap) * 0.3333);
+    }
+
+    .row .push-9 {
+        margin-left: calc(75% + var(--gridgap) * 0.25);
+    }
+
+    .row .push-10 {
+        margin-left: calc(83.3333% + var(--gridgap) * 0.1666);
+    }
+
+    .row .push-11 {
+        margin-left: calc(91.6666% + var(--gridgap) * 0.0833);
+    }
 
 }
 
 /* TWO COLUMN LAYOUT FOR SMALL SCREENS */
-@media (width < 768px) {
+@media (width < 769px) {
     .row:has(> .two-col-mobile) {
         display: flex;
         flex-wrap: wrap;
@@ -442,8 +492,8 @@ body {
 
 .site-header {
     padding: 1em;
-    background-color: black;
-    color: var(--color-light-blue);
+    background-color: transparent;
+    color: white;
 }
 
 @media (width >=768px) {
@@ -464,15 +514,23 @@ body {
     line-height: 1;
 }
 
+.site-logo img {
+    opacity: 0.90;
+}
+
+.site-logo img:hover {
+    opacity: 1;
+}
+
 .site-logo a {
-    color: var(--color-light-blue);
+    color: rgb(255, 255, 255, 0.85);
     text-decoration: none;
     padding: 0.5em 0;
     display: block;
 }
 
 .site-logo a:hover {
-    color: var(--color-light-blue-hover);
+    color: white;
 }
 
 /* SITE NAV */
@@ -494,14 +552,14 @@ body {
 }
 
 .site-navigation a {
-    color: var(--color-light-blue);
+    color: rgb(255, 255, 255, 0.85);
     text-decoration: none;
     padding: 0.5em;
     display: block;
 }
 
 .site-navigation a:hover {
-    color: var(--color-light-blue-hover);
+    color: white;
 }
 
 /* TOGGLE NAV */
@@ -524,7 +582,7 @@ body {
         border: none;
         margin-inline-start: auto;
         background-color: transparent;
-        color: var(--color-text-headings);
+        color: rgb(255, 255, 255, 0.95);
     }
 }
 
@@ -562,7 +620,7 @@ body {
         &::after {
             content: "\2630";
             font-size: 2em;
-            color: var(--color-light-blue)
+            color: white
         }
 
         span {
@@ -623,39 +681,78 @@ section {
 }
 
 /* HERO SECTION STYLING */
+
+.hero-container {
+    max-width: 750px;
+    margin-inline: auto;
+    padding-inline: 1em;
+}
+
 .hero {
     padding-inline: 1em;
-    padding: 7em 1em;
-    text-align: center;
-    background-color: #3F879C;
-    background-image: url(../img/hero-background.jpg);
+    padding: 3em 1em 6.5em 1em;
+    /* background-color: #3F879C; */
+    /* background-image: url(../img/hero-background.jpg); */
     background-size: cover;
     background-position: center center;
     color: white;
     font-weight: 800 px;
-
-}
-
-.hero img {
-    filter: blur(50px);
 }
 
 .hero h1 {
-    font-size: 4em;
-    font-size: clamp(2.5em, 10vw, 4em);
+    font-size: 5em;
+    font-size: clamp(2.5em, 10vw, 5em);
+    margin-block-start: 0.75em;
+    margin-block-end: 0em;
     color: white;
     font-family: aktiv-grotesk, sans-serif;
     font-weight: 800;
     font-style: normal;
+    letter-spacing: -0.1em;
+    word-spacing: 0.1em;
+}
+
+.hero-subtitle {
+    font-size: 4.5em;
+    font-size: clamp(2.5em, 10vw, 4.5em);
+    margin-block-start: 0;
+    margin-block-end: 0;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: white;
+    letter-spacing: -0.1em;
+    word-spacing: 0.1em;
+}
+
+.hero-eyebrow {
+    font-size: 1em;
+    margin-block-start: 1em;
+    margin-block-end: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: white;
 }
 
 .hero h2 {
-    font-size: 2.25em;
+    font-size: 2em;
     color: white;
+    font-weight: 600;
+    margin-block-start: 0.1em;
+    margin-block-end: 1em;
 }
 
 .hero p {
     margin-inline: auto;
+}
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
 }
 
 /* SUBSECTION STYLING */
@@ -696,11 +793,12 @@ section {
 
     h2,
     h3 {
-        margin-block-start: 0.15em;
-        margin-block-end: 1.25em;
+        margin-block-start: 0.1em;
+        margin-block-end: 0.5em;
         font-family: aktiv-grotesk, sans-serif;
         font-weight: 800;
         font-style: normal;
+        font-size: 3em;
     }
 
     .featured-eyebrow {
@@ -750,12 +848,13 @@ section {
     }
 
     h2 {
-        margin-block-start: 0.15em;
-        margin-block-end: 1em;
+        margin-block-start: 0.1em;
+        margin-block-end: 0.5em;
         font-family: aktiv-grotesk, sans-serif;
         font-weight: 800;
         font-style: normal;
         text-align: right;
+        font-size: 3em;
     }
 
     h3 {
@@ -853,11 +952,12 @@ section {
     h2,
     h3 {
         color: white;
-        margin-block-start: 0.15em;
-        margin-block-end: 1em;
+        margin-block-start: 0.1em;
+        margin-block-end: 0.5em;
         font-family: aktiv-grotesk, sans-serif;
         font-weight: 800;
         font-style: normal;
+        font-size: 3em;
     }
 
     .genre-eyebrow {
@@ -999,7 +1099,7 @@ section {
     background-color: #171717;
     color: white;
     padding-block: 2em;
-    padding-block-end: 6em;
+    padding-block-end: 5em;
 
     .row {
         font-size: 80%;
@@ -1009,11 +1109,12 @@ section {
     h3 {
         color: white;
         text-align: center;
-        margin-block-start: 0.15em;
-        margin-block-end: 1.75em;
+        margin-block-start: 0.1em;
+        margin-block-end: 0.5em;
         font-family: aktiv-grotesk, sans-serif;
         font-weight: 800;
         font-style: normal;
+        font-size: 3em;
     }
 
     .vinyl-care-eyebrow {
@@ -1027,8 +1128,8 @@ section {
     }
 
     .box {
-        background-color: #2B2B2B;
-        padding: 3em 4em 2em 4em;
+        background-color: transparent;
+        padding: 0 4em 0 4em;
     }
 
     .box-shadowed {
@@ -1059,16 +1160,16 @@ section {
     background-image: url(../img/aboutus-background.png);
     color: #23545A;
     padding-block: 4em;
-    padding-block-end: 3em;
+    padding-block-end: 4em;
 
     h2,
     h3 {
         color: #153236;
         /* text-align: center; */
-        margin-block-start: 0;
-        margin-block-end: 0.2em;
+        margin-block-start: 0.1em;
+        margin-block-end: 0.5em;
         font-family: aktiv-grotesk, sans-serif;
-        font-size: 3em;
+        font-size: 4em;
         font-weight: 800;
         font-style: normal;
     }
@@ -1091,8 +1192,8 @@ section {
 /* FOOTER SECTION STYLING */
 
 .site-footer {
-    padding-block-start: 3.4em;
-    padding-block-end: 3.1em;
+    padding-block-start: 3.9em;
+    padding-block-end: 3.6em;
 
     a {
         text-decoration: none;
