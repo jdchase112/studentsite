@@ -10,6 +10,7 @@ toggle-tabs [role="tablist"] {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   border-bottom: 1px solid var(--toggle-tab-border-color);
 }
 
@@ -19,9 +20,9 @@ toggle-tabs [role="tablist"] li {
   border-left: 1px solid var(--toggle-tab-border-color);
   border-right: 1px solid var(--toggle-tab-border-color);
   border-bottom: 1px solid var(--toggle-tab-border-color);
-  margin-bottom: -1px;
+  margin-bottom: 0.75em;
   margin-right: -1px;
-  padding: .5em;
+  padding: 0.5em;
 }
 
 toggle-tabs>div[id] {
@@ -34,6 +35,7 @@ toggle-tabs>div[id] {
 toggle-tabs [role="tab"] {
   color: currentColor;
   text-decoration: none;
+
 }
 
 toggle-tabs [role="tab"]:active {
@@ -44,11 +46,34 @@ toggle-tabs [role="tab"]:active {
 
 toggle-tabs [role="tab"][aria-selected="true"] {
   /* 	background-color: #e5e5e5; */
-  text-decoration: none;
+  font-weight: 600;
   color: currentColor;
+
   /*   font-weight: bold; */
 }
 
 toggle-tabs li:has([role="tab"][aria-selected="true"]) {
   border-bottom: 1px solid white;
+}
+
+@media (width < 470px) {
+  toggle-tabs li a {
+    margin: 1.25em;
+    font-size: clamp(0.85em, 2vw, 1.2em);
+  }
+}
+
+@media (width > 453px) and (width < 768px) {
+  toggle-tabs li a {
+    margin: clamp(0.9em, 5vw, 1.15em);
+    font-size: 1em;
+    font-size: clamp(0.9em, 2vw, 1em);
+  }
+}
+
+@media (width > 768px) {
+  toggle-tabs li a {
+    margin: 0.25em;
+    font-size: 1.075em;
+  }
 }
