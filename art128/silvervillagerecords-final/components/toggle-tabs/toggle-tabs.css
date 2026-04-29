@@ -69,3 +69,7 @@ toggle-tabs li:has([role="tab"][aria-selected="true"]) {
     font-size: 1.075em;
   }
 }
+
+a[href^=tel] {
+  color: inherit;
+}
