@@ -68,8 +68,6 @@ body {
 /* ENABLE SMOOTH SCROLLING */
 html {
     scroll-behavior: smooth;
-    overscroll-behavior-y: none;
-    overscroll-behavior-x: none;
 }
 
 /* GLOBAL COLORS */
