@@ -636,6 +636,16 @@ body:has(.header-on-top-of-hero) .hero {
 }
 
 @media (width < 768px) {
+    .site-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 60;
+        background-color: transparent;
+        /* or inherit, to ensure visibility */
+    }
+
     .toggle-nav {
 
         interpolate-size: allow-keywords;
@@ -645,9 +655,10 @@ body:has(.header-on-top-of-hero) .hero {
         }
 
         ul {
-            transition: all 0.3s ease-out;
+            transition: height 0.3s ease-out, padding 0.3s ease-out;
             overflow: hidden;
-            position: fixed;
+            position: absolute;
+            /* changed from fixed */
             top: 0;
             left: 0;
             width: 100%;
@@ -670,6 +681,9 @@ body:has(.header-on-top-of-hero) .hero {
         }
 
     }
+
+
+
 }
 
 /* NAVICON */
