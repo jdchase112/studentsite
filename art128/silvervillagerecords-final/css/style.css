@@ -358,52 +358,56 @@ body {
 
     /* 12 COLUMN GRID SYSTEM */
 
-    .row .col-1 {
-        width: calc(8.3333% - var(--gridgap) * 0.909);
-    }
+    @media (width > 768px) {
 
-    .row .col-2 {
-        width: calc(16.6666% - var(--gridgap) * 0.8333);
-    }
+        .row .col-1 {
+            width: calc(8.3333% - var(--gridgap) * 0.909);
+        }
 
-    .row .col-3 {
-        width: calc(25% - var(--gridgap) * 0.75);
-    }
+        .row .col-2 {
+            width: calc(16.6666% - var(--gridgap) * 0.8333);
+        }
 
-    .row .col-4 {
-        width: calc(33.3333% - var(--gridgap) * 0.6666);
-    }
+        .row .col-3 {
+            width: calc(25% - var(--gridgap) * 0.75);
+        }
 
-    .row .col-5 {
-        width: calc(41.6666% - var(--gridgap) * 0.5833);
-    }
+        .row .col-4 {
+            width: calc(33.3333% - var(--gridgap) * 0.6666);
+        }
 
-    .row .col-6 {
-        width: calc(50% - var(--gridgap) * 0.5);
-    }
+        .row .col-5 {
+            width: calc(41.6666% - var(--gridgap) * 0.5833);
+        }
 
-    .row .col-7 {
-        width: calc(58.3333% - var(--gridgap) * 0.4166);
-    }
+        .row .col-6 {
+            width: calc(50% - var(--gridgap) * 0.5);
+        }
 
-    .row .col-8 {
-        width: calc(66.6666% - var(--gridgap) * 0.3333);
-    }
+        .row .col-7 {
+            width: calc(58.3333% - var(--gridgap) * 0.4166);
+        }
 
-    .row .col-9 {
-        width: calc(75% - var(--gridgap) * 0.25);
-    }
+        .row .col-8 {
+            width: calc(66.6666% - var(--gridgap) * 0.3333);
+        }
 
-    .row .col-10 {
-        width: calc(83.3333% - var(--gridgap) * 0.1666);
-    }
+        .row .col-9 {
+            width: calc(75% - var(--gridgap) * 0.25);
+        }
 
-    .row .col-11 {
-        width: calc(91.6666% - var(--gridgap) * 0.0833);
-    }
+        .row .col-10 {
+            width: calc(83.3333% - var(--gridgap) * 0.1666);
+        }
 
-    .row .col-12 {
-        width: 100%;
+        .row .col-11 {
+            width: calc(91.6666% - var(--gridgap) * 0.0833);
+        }
+
+        .row .col-12 {
+            width: 100%;
+        }
+
     }
 
     /* PUSHES */
@@ -504,7 +508,30 @@ body {
     }
 }
 
+/* HEADER SECTION STYLING */
+
+.site-header {
+
+    &.header-on-top-of-hero {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+    }
+
+}
+
+body:has(.header-on-top-of-hero) .hero {
+    padding-top: 6em;
+}
+
 /* SITE LOGO */
+
+.site-logo {
+    position: relative;
+    z-index: 100;
+}
 
 .site-logo h1 {
     text-align: center;
@@ -538,7 +565,7 @@ body {
 @media (width >=768px) {
     .site-navigation ul {
         display: flex;
-        gap: 0.5em;
+        gap: 1em;
         justify-content: center;
         flex-wrap: wrap;
     }
@@ -551,15 +578,35 @@ body {
     text-align: center;
 }
 
+.site-navigation li {
+    font-weight: 600;
+    font-size: 0.8em;
+    letter-spacing: -0.02em;
+}
+
 .site-navigation a {
     color: rgb(255, 255, 255, 0.85);
     text-decoration: none;
     padding: 0.5em;
     display: block;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.site-navigation img {
+    /* transform: translateY(5px); */
+    opacity: 0.5;
+    display: block;
 }
 
 .site-navigation a:hover {
     color: white;
+
+    img {
+        opacity: 1;
+    }
+
 }
 
 /* TOGGLE NAV */
@@ -583,6 +630,8 @@ body {
         margin-inline-start: auto;
         background-color: transparent;
         color: rgb(255, 255, 255, 0.95);
+        position: relative;
+        z-index: 100;
     }
 }
 
@@ -598,6 +647,16 @@ body {
         ul {
             transition: all 0.3s ease-out;
             overflow: hidden;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 50;
+            padding: 0 1em;
+        }
+
+        .site-navigation li a {
+            justify-content: flex-end;
         }
 
         [data-navstate="closed"] ul {
@@ -606,6 +665,8 @@ body {
 
         [data-navstate="open"] ul {
             height: auto;
+            background-color: black;
+            padding: 4em 1em 1.25em 1em;
         }
 
     }
@@ -683,7 +744,7 @@ section {
 /* HERO SECTION STYLING */
 
 .hero-container {
-    max-width: 750px;
+    max-width: 850px;
     margin-inline: auto;
     padding-inline: 1em;
 }
@@ -696,12 +757,12 @@ section {
     background-size: cover;
     background-position: center center;
     color: white;
-    font-weight: 800 px;
+    position: relative;
 }
 
 .hero h1 {
-    font-size: 5em;
-    font-size: clamp(2.5em, 10vw, 5em);
+    font-size: 5.5em;
+    font-size: clamp(3em, 12vw, 5.5em);
     margin-block-start: 0.75em;
     margin-block-end: 0em;
     color: white;
@@ -713,28 +774,31 @@ section {
 }
 
 .hero-subtitle {
-    font-size: 4.5em;
-    font-size: clamp(2.5em, 10vw, 4.5em);
+    font-size: 2.5em;
+    font-size: clamp(1em, 5vw, 2.5em);
     margin-block-start: 0;
-    margin-block-end: 0;
+    margin-block-end: 1.5em;
     text-transform: uppercase;
-    font-weight: 800;
-    color: white;
-    letter-spacing: -0.1em;
+    font-weight: 700;
+    color: rgb(255, 255, 255, 0.920);
+    letter-spacing: -0.08em;
     word-spacing: 0.1em;
+    transform: translateX(3.25px);
 }
 
 .hero-eyebrow {
     font-size: 1em;
+    justify-content: right;
     margin-block-start: 1em;
     margin-block-end: 0;
     text-transform: uppercase;
     font-weight: 600;
-    color: white;
+    color: rgb(255, 255, 255, 0.875);
 }
 
 .hero h2 {
     font-size: 2em;
+    font-size: clamp(1.25em, 6vw, 2em);
     color: white;
     font-weight: 600;
     margin-block-start: 0.1em;
@@ -753,6 +817,13 @@ section {
     height: 100%;
     z-index: -1;
     overflow: hidden;
+
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
 }
 
 /* SUBSECTION STYLING */
@@ -774,16 +845,6 @@ section {
     }
 }
 
-/* HEADER SECTION STYLING */
-
-.site-header {
-    li {
-        font-weight: 600;
-        font-size: 0.8em;
-        letter-spacing: -0.02em;
-    }
-}
-
 /* NEW RELEASES SECTION STYLING */
 
 #new-releases {
@@ -793,7 +854,7 @@ section {
 
     h2,
     h3 {
-        margin-block-start: 0.1em;
+        margin-block-start: 0.05em;
         margin-block-end: 0.5em;
         font-family: aktiv-grotesk, sans-serif;
         font-weight: 800;
@@ -804,7 +865,7 @@ section {
     .featured-eyebrow {
         font-size: 1em;
         margin-block-start: 1em;
-        margin-block-end: 0.1em;
+        margin-block-end: 0;
         text-transform: uppercase;
         font-weight: 700;
         color: #606060;
@@ -864,11 +925,16 @@ section {
     .used-eyebrow {
         font-size: 1em;
         text-align: right;
+        justify-content: flex-end;
         margin-block-start: 1em;
         margin-block-end: 0.1em;
         text-transform: uppercase;
         font-weight: 700;
         color: #606060;
+    }
+
+    .used-eyebrow img {
+        transform: translateY(0.5px);
     }
 
     .row {
@@ -967,6 +1033,10 @@ section {
         text-transform: uppercase;
         font-weight: 700;
         color: #8f8f8f;
+    }
+
+    .genre-eyebrow img {
+        opacity: 0.7;
     }
 
     .button {
@@ -1119,12 +1189,17 @@ section {
 
     .vinyl-care-eyebrow {
         text-align: center;
+        justify-content: center;
         font-size: 1em;
         margin-block-start: 1.5em;
         margin-block-end: 0.1em;
         text-transform: uppercase;
         font-weight: 700;
         color: #afafaf;
+    }
+
+    .vinyl-care-eyebrow img {
+        opacity: 0.7;
     }
 
     .box {
@@ -1170,7 +1245,7 @@ section {
         margin-block-end: 0.5em;
         font-family: aktiv-grotesk, sans-serif;
         font-size: 4em;
-        font-weight: 800;
+        font-weight: 700;
         font-style: normal;
     }
 
@@ -1223,4 +1298,23 @@ section {
 
 .album-card p:first-of-type {
     margin-block-start: 0.5em;
+}
+
+.icon-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.25em;
+
+}
+
+.icon-eyebrow img {
+    opacity: 0.4;
+    transform: translateY(-1px)
+}
+
+@media (width < 1025px) {
+    .icon-eyebrow img {
+        width: 17.5px;
+        height: 17.5px;
+    }
 }
