@@ -898,6 +898,7 @@ section {
         font-weight: 800;
         font-style: normal;
         font-size: 3em;
+        color: black;
     }
 
     .featured-eyebrow {
@@ -955,6 +956,7 @@ section {
         font-style: normal;
         text-align: right;
         font-size: 3em;
+        color: black;
     }
 
     h3 {
@@ -995,16 +997,17 @@ section {
     }
 
     .box-shadowed {
-        --box-background-color: #B4CFD7;
-        --box-shadow-color: #23545A;
+        --box-background-color: #C2DBE8;
+        --box-shadow-color: #053A45;
         --box-shadow-amount: -20px;
         padding: 2em;
         background: var(--box-background-color);
-        color: #153236;
+        color: #032e38;
         box-shadow: var(--box-shadow-amount) var(--box-shadow-amount) 0 0 var(--box-shadow-color);
 
         h3 {
             color: var(--box-shadow-color);
+            margin-block-start: 0.25em;
         }
 
         @media (width < 1024px) {
@@ -1018,16 +1021,17 @@ section {
     }
 
     .box-shadowed-invert {
-        --box-background-color: #23545A;
-        --box-shadow-color: #B4CFD7;
+        --box-background-color: #053A45;
+        --box-shadow-color: #C2DBE8;
         --box-shadow-amount: 20px;
         padding: 2em;
         background: var(--box-background-color);
-        color: #C4E2EA;
+        color: #cde0ea;
         box-shadow: var(--box-shadow-amount) var(--box-shadow-amount) 0 0 var(--box-shadow-color);
 
         h3 {
             color: var(--box-shadow-color);
+            margin-block-start: 0.25em;
         }
 
         @media (width < 1024px) {
@@ -1270,53 +1274,54 @@ section {
 /* ABOUT SECTION STYLING */
 
 #about {
-    background-color: #BAD3DA;
-    background-image: url(../img/aboutus-background.png);
-    color: #23545A;
+    background-color: #000000;
+    color: white;
     padding-block: 4em;
     padding-block-end: 4em;
 
+    background-image: url(../img/aboutbackground.webp);
+    background-size: cover;
+}
+
+h2,
+h3 {
+    color: white;
+    /* text-align: center; */
+    margin-block-start: 0.1em;
+    margin-block-end: 0.5em;
+    font-family: aktiv-grotesk, sans-serif;
+    font-size: 4em;
+    font-weight: 700;
+    font-style: normal;
+}
+
+@media (width < 409px) {
+
     h2,
     h3 {
-        color: #153236;
-        /* text-align: center; */
-        margin-block-start: 0.1em;
-        margin-block-end: 0.5em;
-        font-family: aktiv-grotesk, sans-serif;
-        font-size: 4em;
-        font-weight: 700;
-        font-style: normal;
+        font-size: clamp(3.35em, 10vw, 3.5em);
     }
+}
 
-    @media (width < 409px) {
+@media (width < 347px) {
 
-        h2,
-        h3 {
-            font-size: clamp(3.35em, 10vw, 3.5em);
-        }
+    h2,
+    h3 {
+        font-size: clamp(3.15em, 10vw, 3.35em);
     }
+}
 
-    @media (width < 347px) {
+p {
+    text-wrap: pretty;
+    font-size: 0.8em;
+}
 
-        h2,
-        h3 {
-            font-size: clamp(3.15em, 10vw, 3.35em);
-        }
-    }
-
-    p {
-        text-wrap: pretty;
-        font-size: 0.8em;
-    }
-
-    .about-eyebrow {
-        /* text-align: center; */
-        font-size: 1em;
-        margin-block-end: 0.1em;
-        text-transform: uppercase;
-        font-weight: 700;
-    }
-
+.about-eyebrow {
+    /* text-align: center; */
+    font-size: 1em;
+    margin-block-end: 0.1em;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
 /* FOOTER SECTION STYLING */
@@ -1333,13 +1338,13 @@ section {
 
     a {
         text-decoration: none;
-        color: white;
+        color: rgb(255, 255, 255);
         font-weight: 600;
         opacity: 0.85;
     }
 
     h2 {
-        color: white;
+        color: rgb(255, 255, 255);
         margin-block-end: 0.1em;
     }
 
