@@ -1540,3 +1540,64 @@ p {
         translate: 0 0;
     }
 }
+
+.album-card {
+    transition: transform 0.2s ease-out;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+/* PRE-OWNED SCROLL TRIGGER ANIMATION */
+
+.trigger-pre-owned {
+    /* Set the trigger */
+    timeline-trigger: --trigger-pre-owned view() cover / cover;
+}
+
+.trigger-animation-slide-in-from-left {
+    /*
+    Connect the animation to the trigger:
+    - --my-trigger: which trigger to listen to
+    - play-forwards: play the animation when the trigger activates
+    - play-backwards: reverse it when the trigger deactivates
+  */
+    animation: trigger-animation-slide-in-from-left 1s ease-out both;
+    animation-trigger: --trigger-pre-owned play-forwards play-backwards;
+}
+
+@keyframes trigger-animation-slide-in-from-left {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.trigger-animation-slide-in-from-right {
+    /*
+    Connect the animation to the trigger:
+    - --my-trigger: which trigger to listen to
+    - play-forwards: play the animation when the trigger activates
+    - play-backwards: reverse it when the trigger deactivates
+  */
+    animation: trigger-animation-slide-in-from-right 1s ease-out both;
+    animation-trigger: --trigger-pre-owned play-forwards play-backwards;
+}
+
+@keyframes trigger-animation-slide-in-from-right {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
