@@ -867,6 +867,7 @@ section {
     height: 100%;
     z-index: -2;
     overflow: hidden;
+    object-fit: cover;
 
 }
 
