@@ -998,11 +998,11 @@ section {
 
     .box-shadowed {
         --box-background-color: #C2DBE8;
-        --box-shadow-color: #053A45;
+        --box-shadow-color: #114B5C;
         --box-shadow-amount: -20px;
         padding: 2em;
         background: var(--box-background-color);
-        color: #032e38;
+        color: #0b333f;
         box-shadow: var(--box-shadow-amount) var(--box-shadow-amount) 0 0 var(--box-shadow-color);
 
         h3 {
@@ -1021,12 +1021,12 @@ section {
     }
 
     .box-shadowed-invert {
-        --box-background-color: #053A45;
+        --box-background-color: #114B5C;
         --box-shadow-color: #C2DBE8;
         --box-shadow-amount: 20px;
         padding: 2em;
         background: var(--box-background-color);
-        color: #cde0ea;
+        color: #d8ecf6;
         box-shadow: var(--box-shadow-amount) var(--box-shadow-amount) 0 0 var(--box-shadow-color);
 
         h3 {
@@ -1279,7 +1279,7 @@ section {
     padding-block: 4em;
     padding-block-end: 4em;
 
-    background-image: url(../img/aboutbackground.webp);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/aboutbackground.webp);
     background-size: cover;
 }
 
