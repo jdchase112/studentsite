@@ -58,8 +58,8 @@ toggle-tabs li:has([role="tab"][aria-selected="true"]) {
 
 @media (width < 470px) {
   toggle-tabs li a {
-    margin: 1.25em;
-    font-size: clamp(0.85em, 2vw, 1.2em);
+    margin: 1em;
+    font-size: clamp(0.95em, 2vw, 1.2em);
   }
 }
 

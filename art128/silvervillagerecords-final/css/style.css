@@ -31,6 +31,8 @@
             #SUB PAGES
                 #...
 
+    #ANIMATION
+
 /* ----------------------------- */
 /* ----- GLOBAL STYLING -------- */
 /* ----------------------------- */
@@ -190,6 +192,10 @@ p {
 
 .text-centered {
     text-align: center;
+}
+
+.text-right {
+    text-align: right;
 }
 
 p.text-centered {
@@ -961,6 +967,7 @@ section {
 
     h3 {
         margin-block-end: 0.5em;
+        font-size: 2.5em;
     }
 
     .used-eyebrow {
@@ -1408,5 +1415,122 @@ p {
     .icon-eyebrow img {
         width: 17.5px;
         height: 17.5px;
+    }
+}
+
+/* ANIMATION */
+
+.fade-in {
+    --delay: 0s;
+
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: var(--delay);
+    animation-timing-function: ease-out;
+
+    opacity: 0;
+
+}
+
+@keyframes fadeIn {
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in-from-top {
+
+    --delay: 0s;
+
+    animation-name: fadeInFromTop;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: var(--delay);
+    animation-timing-function: ease-out;
+
+    opacity: 0;
+    translate: 0 -20px;
+
+}
+
+@keyframes fadeInFromTop {
+
+    to {
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+
+@media (width > 768px) {
+
+    .fade-in-from-top-desktop {
+
+        --delay: 0s;
+
+        animation-name: fadeInFromTop;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-delay: var(--delay);
+        animation-timing-function: ease-out;
+
+        opacity: 0;
+        translate: 0 -20px;
+
+    }
+
+    @keyframes fadeInFromTop {
+
+        to {
+            opacity: 1;
+            translate: 0 0;
+        }
+    }
+}
+
+.fade-in-from-left {
+
+    --delay: 0s;
+
+    animation-name: fadeInFromLeft;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: var(--delay);
+    animation-timing-function: ease-out;
+
+    opacity: 0;
+    translate: -20px 0;
+
+}
+
+@keyframes fadeInFromLeft {
+
+    to {
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+
+.fade-in-from-right {
+
+    --delay: 0s;
+
+    animation-name: fadeInFromRight;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: var(--delay);
+    animation-timing-function: ease-out;
+
+    opacity: 0;
+    translate: 20px 0;
+
+}
+
+@keyframes fadeInFromRight {
+
+    to {
+        opacity: 1;
+        translate: 0 0;
     }
 }

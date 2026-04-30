@@ -34,10 +34,11 @@
 
   <header class="site-header toggle-nav header-on-top-of-hero">
     <div class="site-logo">
-      <img src="img/logo.svg" alt="Silver Village Records Logo" width="40" height="35">
+      <img class="fade-in-from-top" style="--delay: 0.25s" src="img/logo.svg" alt="Silver Village Records Logo"
+        width="40" height="35">
     </div>
-    <nav class="site-navigation" data-navstate="closed">
-      <button class="menu-button navicon"><span>Menu</span></button>
+    <nav class="site-navigation fade-in-from-top-desktop" style="--delay: 0.25s" data-navstate="closed">
+      <button class="menu-button navicon fade-in-from-top" style="--delay: 0.25s"><span>Menu</span></button>
       <ul>
         <li><a href="#new-releases"><img src="img/new.svg" alt="New Releases" width="20" height="20"> NEW
             RELEASES</a></li>
@@ -57,22 +58,22 @@
 
       <div class="hero-container">
 
-        <div style="text-align: left;">
-          <h1>SILVER
+        <div>
+          <h1 class="fade-in-from-left">SILVER
             VILLAGE</h1>
-          <div class="hero-subtitle">RECORDS</div>
+          <div class="hero-subtitle fade-in-from-left" style="--delay: 0.5s">RECORDS</div>
         </div>
 
-        <div style="text-align: right;">
-          <div class="hero-eyebrow"> EST. 1998</div>
-          <h2>groove in better company.</br>
+        <div class="text-right">
+          <div class="hero-eyebrow fade-in-from-right" style="--delay: 0.5s"> EST. 1998</div>
+          <h2 class="fade-in-from-right">groove in better company.</br>
             groove with silver village.
           </h2>
         </div>
 
         <div class="bg-video">
           <video autoplay muted playsinline loop>
-            <source src="vid/herovideo.mp4" type="video/mp4">
+            <source src="vid/herovideo.webm" type="video/webm">
           </video>
         </div>
 
