@@ -33,23 +33,29 @@ toggle-tabs>div[id] {
 }
 
 toggle-tabs [role="tab"] {
-  color: currentColor;
+  color: white;
+  opacity: 0.85;
   text-decoration: none;
 
+  &:hover {
+    opacity: 1;
+  }
+
 }
+
+
 
 toggle-tabs [role="tab"]:active {
   /* 	background-color: #f7f7f7; */
-  color: currentColor;
+  color: white;
   text-decoration: none;
+  opacity: 1;
 }
 
 toggle-tabs [role="tab"][aria-selected="true"] {
-  /* 	background-color: #e5e5e5; */
   font-weight: 600;
-  color: currentColor;
-
-  /*   font-weight: bold; */
+  color: white;
+  opacity: 1;
 }
 
 toggle-tabs li:has([role="tab"][aria-selected="true"]) {
@@ -71,5 +77,5 @@ toggle-tabs li:has([role="tab"][aria-selected="true"]) {
 }
 
 a[href^=tel] {
-  color: inherit;
+  color: white;
 }

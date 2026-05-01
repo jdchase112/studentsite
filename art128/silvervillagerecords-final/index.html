@@ -34,8 +34,10 @@
 
   <header class="site-header toggle-nav header-on-top-of-hero">
     <div class="site-logo">
-      <img class="fade-in-from-top" style="--delay: 0.25s" src="img/logo.svg" alt="Silver Village Records Logo"
-        width="40" height="35">
+      <a href="index.html">
+        <img class="fade-in-from-top" style="--delay: 0.25s" src="img/logo.svg" alt="Silver Village Records Logo"
+          width="40" height="35">
+      </a>
     </div>
     <nav class="site-navigation fade-in-from-top-desktop" style="--delay: 0.25s" data-navstate="closed">
       <button class="menu-button navicon fade-in-from-top" style="--delay: 0.25s"><span>Menu</span></button>
@@ -61,12 +63,12 @@
         <div>
           <h1 class="fade-in-from-left">SILVER
             VILLAGE</h1>
-          <div class="hero-subtitle fade-in-from-left" style="--delay: 0.5s">RECORDS</div>
+          <div class="hero-subtitle fade-in-from-left" style="--delay: 0.25s">RECORDS</div>
         </div>
 
         <div class="text-right">
-          <div class="hero-eyebrow fade-in-from-right" style="--delay: 0.5s"> EST. 1998</div>
-          <h2 class="fade-in-from-right">groove in better company.</br>
+          <div class="hero-eyebrow fade-in-from-right" style="--delay: 0.25s"> EST. 1998</div>
+          <h2 class="fade-in-from-right" style="--delay: 0.5s">groove in better company.</br>
             groove with silver village.
           </h2>
         </div>
@@ -84,13 +86,13 @@
     </section>
 
     <section id="new-releases">
-      <div class="container">
+      <div class="container trigger-new-releases">
 
-        <div class="featured-eyebrow icon-eyebrow">FEATURED<img src="img/new-eyebrow.svg" alt="New Releases" width="20"
-            height="20"></div>
-        <h2>NEW RELEASES</h2>
+        <div class="featured-eyebrow icon-eyebrow trigger-animation-fade-in-new">FEATURED<img src="img/new-eyebrow.svg"
+            alt="New Releases" width="20" height="20"></div>
+        <h2 class="trigger-animation-fade-in-new">NEW RELEASES</h2>
 
-        <div class="row">
+        <div class="row trigger-animation-slide-in-from-top-new">
 
           <div class="one-fourth two-col-mobile album-card">
             <img class="box-shadowed" style="--box-shadow-color: #A2C6E8;" src="img/Geese-GettingKilled.webp"
@@ -133,18 +135,20 @@
 
       </div>
 
+      </div>
+
     </section>
 
     <section id="used-music">
 
-      <div class="container">
+      <div class="container trigger-pre-owned">
 
-        <div class="used-eyebrow icon-eyebrow"><img src="img/used-eyebrow.svg" alt="Used Records" width="20"
-            height="20">VINYL &
+        <div class="used-eyebrow icon-eyebrow trigger-animation-fade-in"><img src="img/used-eyebrow.svg"
+            alt="Used Music" width="20" height="20">VINYL &
           CD</div>
-        <h2>PRE-OWNED</h2>
+        <h2 class="trigger-animation-fade-in">PRE-OWNED</h2>
 
-        <div class="row trigger-pre-owned">
+        <div class="row">
 
           <div class="one-half box-shadowed trigger-animation-slide-in-from-left">
 
@@ -255,17 +259,17 @@
     </section>
 
     <div class="section" id="genres">
-      <div class="container">
+      <div class="container trigger-genres">
 
-        <div class="genre-eyebrow icon-eyebrow">SURF OUR BINS<img src="img/genres-eyebrow.svg" alt="Genres" width="20"
-            height="20"></div>
-        <h2>BROWSE BY GENRE</h2>
+        <div class="genre-eyebrow icon-eyebrow trigger-animation-fade-in-genres">SURF OUR BINS<img
+            src="img/genres-eyebrow.svg" alt="Genres" width="20" height="20"></div>
+        <h2 class="trigger-animation-fade-in-genres">BROWSE BY GENRE</h2>
 
         <!-- Toggle Tabs Web Component from Chris Ferdinandi: https://gomakethings.com/snippets/web-components/toggle-tabs/ -->
 
         <link rel="stylesheet" href="components/toggle-tabs/toggle-tabs.css">
 
-        <toggle-tabs>
+        <toggle-tabs class="trigger-animation-fade-in-genres">
           <ul tabs>
             <li><a href="#rock">Rock</a></li>
             <li><a href="#hip-hop">Hip-Hop</a></li>
@@ -1230,15 +1234,15 @@
 
     <div class="section" id="vinyl-care">
 
-      <div class="container">
+      <div class="container trigger-vinyl-care">
 
-        <div class="vinyl-care-eyebrow icon-eyebrow">PREMIUM QUALITY<img src="img/vinylcare-eyebrow.svg"
-            alt="Vinyl Care" width="20" height="20"></div>
-        <h2>VINYL CARE SUPPLIES</h2>
+        <div class="vinyl-care-eyebrow icon-eyebrow trigger-animation-fade-in-vinyl-care">PREMIUM QUALITY<img
+            src="img/vinylcare-eyebrow.svg" alt="Vinyl Care" width="20" height="20"></div>
+        <h2 class="trigger-animation-fade-in-vinyl-care">VINYL CARE SUPPLIES</h2>
 
         <div class="row box centered">
 
-          <div class="one-third">
+          <div class="one-third trigger-animation-slide-in-from-top">
 
             <div class="album-card vinyl-care-card">
               <img class="box-shadowed" style="--box-shadow-color:#FD2C4F;" src="img/vinylspray.webp"
@@ -1250,7 +1254,7 @@
 
           </div>
 
-          <div class="one-third">
+          <div class="one-third trigger-animation-slide-in-from-top">
 
             <div class="album-card vinyl-care-card">
               <img class="box-shadowed" style="--box-shadow-color:#F68422;" src="img/vinylbrush.avif"
@@ -1262,7 +1266,7 @@
 
           </div>
 
-          <div class="one-third">
+          <div class="one-third trigger-animation-slide-in-from-top">
 
             <div class="album-card vinyl-care-card">
               <img class="box-shadowed" style="--box-shadow-color:#E7E303;" src="img/washer.webp"
@@ -1281,11 +1285,11 @@
     </div>
 
     <div class="section" id="about">
-      <div class="container">
+      <div class="container trigger-about">
 
         <div class="row">
 
-          <div class="two-thirds">
+          <div class="two-thirds trigger-animation-slide-in-from-left-about">
 
             <div class="about-eyebrow icon-eyebrow">ABOUT US<img src="img/about.svg" alt="About Us" width="20"
                 height="20"></div>
@@ -1295,7 +1299,7 @@
 
         </div>
 
-        <div class="row">
+        <div class="row trigger-animation-slide-in-from-right-about">
 
           <div class="one-fourth push-5 two-col-mobile">
 
@@ -1328,12 +1332,14 @@
 
   <footer class="site-footer">
 
-    <div class="footer-container">
-      <div class="row">
+    <div class="footer-container trigger-footer">
+      <div class="row trigger-animation-slide-in-from-bottom-footer">
         <div class="two-thirds two-col-mobile">
-          <img src="img/logo.svg" alt="Silver Village Records Logo" width="75" height="75">
-          <h2>SILVER VILLAGE</h2>
-          <h3>RECORDS</h3>
+          <a href="index.html">
+            <img src="img/logo.svg" alt="Silver Village Records Logo" width="75" height="75">
+            <h2>SILVER VILLAGE</h2>
+            <h3>RECORDS</h3>
+          </a>
           <p>(808) 555-0199</p>
           <p>2298 S King St Honolulu, HI 96826</p>
           <p>silvervillage@records.com</p>

@@ -258,16 +258,7 @@ button {
     }
 }
 
-/*  VIEW BLOCK LEVEL ELEMENT OUTLINES */
-
-/* body * {
-        background-color: rgba(0, 0, 0, 0.2);
-        border: 1px solid rgba(0, 0, 0, 0.2);
-        color: rgba(0, 0, 0, 0.2)
-
-/* ----------------------------- */
-/* -------- BASE LAYOUT -------- */
-/* ----------------------------- */
+/* #LINKS */
 
 .container {
     max-width: 1000px;
@@ -580,18 +571,17 @@ body:has(.header-on-top-of-hero) .hero {
 }
 
 .site-navigation img {
-    /* transform: translateY(5px); */
     opacity: 0.5;
     display: block;
 }
 
 .site-navigation a:hover {
     color: white;
+    opacity: 1;
 
     img {
-        opacity: 1;
+        opacity: 0.85;
     }
-
 }
 
 /* TOGGLE NAV */
@@ -741,11 +731,11 @@ body {
     margin: 0;
     padding: 0;
     list-style: none;
-    margin-block-end: 0.5em;
+    margin-block-end: 0.75em;
     align-content: right;
 
     li {
-        margin-block-end: 0.25em;
+        margin-block-end: 0.5;
     }
 
     @media (width < 768px) {
@@ -905,7 +895,7 @@ section {
     h2,
     h3 {
         margin-block-start: 0.05em;
-        margin-block-end: 0.5em;
+        margin-block-end: 0.75em;
         font-family: aktiv-grotesk, sans-serif;
         font-weight: 800;
         font-style: normal;
@@ -929,19 +919,28 @@ section {
     .box-shadowed {
         --box-background-color: transparent;
         --box-shadow-color: red;
-        --box-shadow-x: 20px;
-        --box-shadow-y: -20px;
+        --box-shadow-x: 15px;
+        --box-shadow-y: -15px;
         background: var(--box-background-color);
         box-shadow: var(--box-shadow-x) var(--box-shadow-y) 0 0 var(--box-shadow-color);
 
-        @media (width < 1024px) {
-            --box-shadow-x: 1em;
-            --box-shadow-y: -1em;
+        transition: box-shadow 0.2s ease-out;
+
+        &:hover {
+            box-shadow: 20px -20px 0 0 var(--box-shadow-color);
         }
 
-        /* @media (width < 768px) {
-            --box-shadow-amount: -10px;
-        } */
+        @media (width < 1024px) {
+            --box-shadow-x: 0px;
+            --box-shadow-y: 0px;
+
+            transition: box-shadow 0.2s ease-out;
+
+            &:hover {
+                box-shadow: 10px -10px 0 0 var(--box-shadow-color);
+            }
+
+        }
 
     }
 
@@ -951,7 +950,7 @@ section {
 
 #used-music {
 
-    padding-block: 2em;
+    padding-block: 3em;
     padding-block-end: 5em;
     background-color: white;
 
@@ -962,7 +961,7 @@ section {
 
     h2 {
         margin-block-start: 0.1em;
-        margin-block-end: 0.5em;
+        margin-block-end: 0.75em;
         font-family: aktiv-grotesk, sans-serif;
         font-weight: 800;
         font-style: normal;
@@ -1012,48 +1011,60 @@ section {
     .box-shadowed {
         --box-background-color: #C2DBE8;
         --box-shadow-color: #114B5C;
-        --box-shadow-amount: -20px;
+        --box-shadow-amount: -15px;
         padding: 2em;
         background: var(--box-background-color);
         color: #0b333f;
         box-shadow: var(--box-shadow-amount) var(--box-shadow-amount) 0 0 var(--box-shadow-color);
 
+        transition: box-shadow 0.2s ease-out;
+
+        &:hover {
+            box-shadow: -20px -20px 0 0 var(--box-shadow-color);
+        }
+
+        @media (width < 1024px) {
+            --box-shadow-x: 0px;
+            --box-shadow-y: 0px;
+        }
+
         h3 {
             color: var(--box-shadow-color);
             margin-block-start: 0.25em;
         }
 
-        @media (width < 1024px) {
-            --box-shadow-amount: 0;
+    }
+
+    @media (width < 769px) {
+        .box-shadowed {
+            margin-block-end: 4em;
         }
-
-        /* @media (width < 768px) {
-            --box-shadow-amount: -10px;
-        } */
-
     }
 
     .box-shadowed-invert {
         --box-background-color: #114B5C;
         --box-shadow-color: #C2DBE8;
-        --box-shadow-amount: 20px;
+        --box-shadow-amount: 15px;
         padding: 2em;
         background: var(--box-background-color);
         color: #d8ecf6;
         box-shadow: var(--box-shadow-amount) var(--box-shadow-amount) 0 0 var(--box-shadow-color);
 
+        transition: box-shadow 0.2s ease-out;
+
+        &:hover {
+            box-shadow: 20px 20px 0 0 var(--box-shadow-color);
+        }
+
+        @media (width < 1024px) {
+            --box-shadow-x: 0px;
+            --box-shadow-y: 0px;
+        }
+
         h3 {
             color: var(--box-shadow-color);
             margin-block-start: 0.25em;
         }
-
-        @media (width < 1024px) {
-            --box-shadow-amount: 0;
-        }
-
-        /* @media (width < 768px) {
-            --box-shadow-amount: -10px;
-        } */
 
     }
 
@@ -1225,7 +1236,7 @@ section {
     background-color: #171717;
     color: white;
     padding-block: 2em;
-    padding-block-end: 5em;
+    padding-block-end: 4em;
 
     .row {
         font-size: 80%;
@@ -1236,7 +1247,7 @@ section {
         color: white;
         text-align: center;
         margin-block-start: 0.1em;
-        margin-block-end: 0.5em;
+        margin-block-end: 0.75em;
         font-family: aktiv-grotesk, sans-serif;
         font-weight: 800;
         font-style: normal;
@@ -1264,18 +1275,31 @@ section {
     }
 
     .box-shadowed {
-        --box-background-color: #23545A;
-        --box-shadow-color: #B4CFD7;
+        --box-background-color: transparent;
+        --box-shadow-color: red;
+        --box-shadow-x: 15px;
+        --box-shadow-y: -15px;
         background: var(--box-background-color);
-        box-shadow: 20px -20px 0 0 var(--box-shadow-color);
+        box-shadow: var(--box-shadow-x) var(--box-shadow-y) 0 0 var(--box-shadow-color);
 
-        @media (width < 1024px) {
-            --box-shadow-amount: 1em;
+        transition: box-shadow 0.2s ease-out;
+
+        &:hover {
+            box-shadow: 20px -20px 0 0 var(--box-shadow-color);
         }
 
-        /* @media (width < 768px) {
-            --box-shadow-amount: -10px;
-        } */
+        @media (width < 1024px) {
+            --box-shadow-x: 0px;
+            --box-shadow-y: 0px;
+
+            transition: box-shadow 0.2s ease-out;
+
+            &:hover {
+                box-shadow: 15px -15px 0 0 var(--box-shadow-color);
+            }
+
+        }
+
     }
 
     .vinyl-care-card {
@@ -1290,7 +1314,7 @@ section {
     background-color: #000000;
     color: white;
     padding-block: 4em;
-    padding-block-end: 4em;
+    padding-block-end: 5em;
 
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/aboutbackground.webp);
     background-size: cover;
@@ -1351,10 +1375,6 @@ p {
 
     a {
         text-decoration: none;
-        color: rgb(255, 255, 255);
-        font-weight: 600;
-        opacity: 0.85;
-        font-size: 1.05em;
     }
 
     h2 {
@@ -1381,7 +1401,7 @@ p {
         font-size: 0.85em;
         color: #8f8f8f;
         font-weight: 600;
-        transform: translateX(1.25px);
+        transform: translateX(3.25px);
     }
 
     a:hover {
@@ -1392,6 +1412,14 @@ p {
         transform: translateX(2px);
     }
 
+}
+
+.footer-navigation a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    opacity: 0.85;
+    font-size: 1.05em;
 }
 
 /* FIX ALBUM PARAGRAPHS */
@@ -1545,7 +1573,64 @@ p {
     transition: transform 0.2s ease-out;
 
     &:hover {
-        transform: scale(1.05);
+        transform: scale(1.025);
+    }
+}
+
+.site-logo {
+    transition: transform 0.2s ease-out;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.site-navigation a,
+.footer-navigation li {
+    transition: transform 0.2s ease-out;
+
+    &:hover {
+        transform: scale(1.015);
+    }
+}
+
+/* NEW RELEASES SCROLL TRIGGER ANIMATION */
+
+.trigger-new-releases {
+    /* Set the trigger */
+    timeline-trigger: --trigger-new-releases view() cover / cover;
+}
+
+.trigger-animation-fade-in-new {
+    animation: trigger-animation-fade-in-new 1s ease-out both;
+    animation-trigger: --trigger-new-releases play-forwards play-backwards;
+}
+
+@keyframes trigger-animation-fade-in-new {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.trigger-animation-slide-in-from-top-new {
+    animation: trigger-animation-slide-in-from-top-new 1s ease-out both;
+    animation-trigger: --trigger-new-releases play-forwards play-backwards;
+}
+
+@keyframes trigger-animation-slide-in-from-top-new {
+    from {
+        opacity: 0;
+        delay: 1s;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
@@ -1554,6 +1639,21 @@ p {
 .trigger-pre-owned {
     /* Set the trigger */
     timeline-trigger: --trigger-pre-owned view() cover / cover;
+}
+
+.trigger-animation-fade-in {
+    animation: trigger-animation-fade-in 1s ease-out both;
+    animation-trigger: --trigger-pre-owned play-forwards play-backwards;
+}
+
+@keyframes trigger-animation-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .trigger-animation-slide-in-from-left {
@@ -1574,12 +1674,6 @@ p {
 }
 
 .trigger-animation-slide-in-from-right {
-    /*
-    Connect the animation to the trigger:
-    - --my-trigger: which trigger to listen to
-    - play-forwards: play the animation when the trigger activates
-    - play-backwards: reverse it when the trigger deactivates
-  */
     animation: trigger-animation-slide-in-from-right 1s ease-out both;
     animation-trigger: --trigger-pre-owned play-forwards play-backwards;
 }
@@ -1593,5 +1687,149 @@ p {
     to {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+.trigger-animation-slide-in-from-top {
+    animation: trigger-animation-slide-in-from-top 1s ease-out both;
+    animation-trigger: --trigger-pre-owned play-forwards play-backwards;
+}
+
+@keyframes trigger-animation-slide-in-from-top {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* GENRES SCROLL TRIGGER ANIMATION */
+
+.trigger-genres {
+    /* Set the trigger */
+    timeline-trigger: --trigger-genres view() cover / cover;
+}
+
+.trigger-animation-fade-in-genres {
+
+    animation: trigger-animation-fade-in-genres 1s ease-out both;
+    animation-trigger: --trigger-genres play-forwards play-backwards;
+}
+
+@keyframes trigger-animation-fade-in-genres {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* VINYL CARE SCROLL TRIGGER ANIMATION */
+
+.trigger-vinyl-care {
+    /* Set the trigger */
+    timeline-trigger: --trigger-vinyl-care view() cover / cover;
+}
+
+.trigger-animation-fade-in-vinyl-care {
+    animation: trigger-animation-fade-in-vinyl-care 1s ease-out both;
+    animation-trigger: --trigger-vinyl-care play-forwards play-backwards;
+}
+
+@keyframes trigger-animation-fade-in-vinyl-care {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.trigger-animation-slide-in-from-top {
+    animation: trigger-animation-slide-in-from-top 1s ease-out both;
+    animation-trigger: --trigger-vinyl-care play-forwards play-backwards;
+}
+
+@keyframes trigger-animation-slide-in-from-top {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ABOUT US SCROLL TRIGGER ANIMATION */
+
+.trigger-about {
+    /* Set the trigger */
+    timeline-trigger: --trigger-about-us view() cover / cover;
+}
+
+.trigger-animation-slide-in-from-left-about {
+    animation: trigger-animation-slide-in-from-left-about 1s ease-out both;
+    animation-trigger: --trigger-about-us play-forwards play-backwards;
+}
+
+@keyframes trigger-animation-slide-in-from-left-about {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.trigger-animation-slide-in-from-right-about {
+    animation: trigger-animation-slide-in-from-right-about 1s ease-out both;
+    animation-trigger: --trigger-about-us play-forwards play-backwards;
+}
+
+@keyframes trigger-animation-slide-in-from-right-about {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* FOOTER SCROLL TRIGGER ANIMATION */
+
+.trigger-footer {
+    /* Set the trigger */
+    timeline-trigger: --trigger-footer view() cover / cover;
+}
+
+.trigger-animation-slide-in-from-bottom-footer {
+    animation: trigger-animation-slide-in-from-bottom-footer 1s ease-out both;
+    animation-trigger: --trigger-footer play-forwards play-backwards;
+}
+
+@keyframes trigger-animation-slide-in-from-bottom-footer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
