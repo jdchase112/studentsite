@@ -1024,8 +1024,13 @@ section {
         }
 
         @media (width < 1024px) {
-            --box-shadow-x: 0px;
-            --box-shadow-y: 0px;
+            box-shadow: 0 0 0 0 var(--box-shadow-color);
+
+            &:hover {
+                box-shadow: 0 0 0 0 var(--box-shadow-color);
+
+            }
+
         }
 
         h3 {
@@ -1057,8 +1062,13 @@ section {
         }
 
         @media (width < 1024px) {
-            --box-shadow-x: 0px;
-            --box-shadow-y: 0px;
+            box-shadow: 0 0 0 0 var(--box-shadow-color);
+
+            &:hover {
+                box-shadow: 0 0 0 0 var(--box-shadow-color);
+
+            }
+
         }
 
         h3 {
