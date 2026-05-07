@@ -905,11 +905,12 @@ section {
     h2,
     h3 {
         margin-block-start: 0.05em;
-        margin-block-end: 0.75em;
+        margin-block-end: 0.8em;
         font-family: var(--font-headings);
         font-weight: 800;
         font-style: normal;
         font-size: 3em;
+        font-size: clamp(2em, 6vw, 3em);
         color: black;
     }
 
@@ -971,12 +972,13 @@ section {
 
     h2 {
         margin-block-start: 0.1em;
-        margin-block-end: 0.75em;
+        margin-block-end: 1em;
         font-family: var(--font-headings);
         font-weight: 800;
         font-style: normal;
         text-align: right;
         font-size: 3em;
+        font-size: clamp(2em, 6vw, 3em);
         color: black;
     }
 
@@ -1111,6 +1113,7 @@ section {
         font-weight: 800;
         font-style: normal;
         font-size: 3em;
+        font-size: clamp(2em, 6vw, 3em);
     }
 
     .genre-eyebrow {
@@ -1267,11 +1270,12 @@ section {
         color: white;
         text-align: center;
         margin-block-start: 0.1em;
-        margin-block-end: 0.75em;
+        margin-block-end: 1em;
         font-family: var(--font-headings);
         font-weight: 800;
         font-style: normal;
         font-size: 3em;
+        font-size: clamp(2em, 6vw, 3em);
     }
 
     .vinyl-care-eyebrow {
