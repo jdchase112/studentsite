@@ -1030,7 +1030,7 @@ section {
 
         transition: box-shadow 0.2s ease-out;
 
-        font-size: 110%;
+        font-size: 115%;
 
         &:hover {
             box-shadow: -20px -20px 0 0 var(--box-shadow-color);
@@ -1068,7 +1068,7 @@ section {
         color: #d8ecf6;
         box-shadow: var(--box-shadow-amount) var(--box-shadow-amount) 0 0 var(--box-shadow-color);
 
-        font-size: 110%;
+        font-size: 115%;
 
         transition: box-shadow 0.2s ease-out;
 
