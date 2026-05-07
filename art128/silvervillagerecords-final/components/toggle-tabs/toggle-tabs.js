@@ -4,13 +4,13 @@ customElements.define('toggle-tabs', class extends HTMLElement {
 	/**
 	 * Instantiate the Web Component
 	 */
-	constructor () {
+	constructor() {
 
 		// Get parent class properties
 		super();
 
 		// Define properties
-		this.tabList = this.querySelector('[tabs]');
+		this.tabList = this.querySelector('[data-tabs]');
 
 		// Setup UI
 		this.setup();
@@ -21,7 +21,7 @@ customElements.define('toggle-tabs', class extends HTMLElement {
 	 * Handle events on the Web Component
 	 * @param  {Event} event The event object
 	 */
-	handleEvent (event) {
+	handleEvent(event) {
 		this[`on${event.type}`](event);
 	}
 
@@ -29,7 +29,7 @@ customElements.define('toggle-tabs', class extends HTMLElement {
 	 * Handle click events
 	 * @param  {Event} event The event object
 	 */
-	onclick (event) {
+	onclick(event) {
 
 		// Only run on tab links
 		if (!event.target.matches('[role="tab"]')) return;
@@ -49,7 +49,7 @@ customElements.define('toggle-tabs', class extends HTMLElement {
 	 * Handle keydown events
 	 * @param  {Event} event The event object
 	 */
-	onkeydown (event) {
+	onkeydown(event) {
 
 		// Only run for left and right arrow keys
 		if (!['ArrowLeft', 'ArrowRight'].includes(event.code)) return;
@@ -83,7 +83,7 @@ customElements.define('toggle-tabs', class extends HTMLElement {
 	 * Toggle tab visibility
 	 * @param  {Node} tab The tab to show
 	 */
-	toggle (tab) {
+	toggle(tab) {
 
 		// Get the target tab pane
 		let tabPane = this.querySelector(tab.hash);
@@ -110,7 +110,7 @@ customElements.define('toggle-tabs', class extends HTMLElement {
 	/**
 	 * Add buttons and hide content on page load
 	 */
-	setup () {
+	setup() {
 
 		// Only run if there are tabs
 		if (!this.tabList) return;

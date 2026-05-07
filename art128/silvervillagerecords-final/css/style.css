@@ -256,6 +256,7 @@ button {
         background-color: #E7F0F3;
         color: #23545A;
     }
+
 }
 
 /* #LINKS */
@@ -623,8 +624,6 @@ body:has(.header-on-top-of-hero) .hero {
 
     .toggle-nav {
 
-        interpolate-size: allow-keywords;
-
         .site-logo {
             position: absolute;
         }
@@ -741,7 +740,6 @@ body {
     padding: 0;
     list-style: none;
     margin-block-end: 0.75em;
-    align-content: right;
 
     li {
         margin-block-end: 0.5;
@@ -928,6 +926,7 @@ section {
     }
 
     .box-shadowed {
+
         --box-background-color: transparent;
         --box-shadow-color: red;
         --box-shadow-x: 15px;
@@ -1031,6 +1030,8 @@ section {
 
         transition: box-shadow 0.2s ease-out;
 
+        font-size: 120%;
+
         &:hover {
             box-shadow: -20px -20px 0 0 var(--box-shadow-color);
         }
@@ -1066,6 +1067,8 @@ section {
         background: var(--box-background-color);
         color: #d8ecf6;
         box-shadow: var(--box-shadow-amount) var(--box-shadow-amount) 0 0 var(--box-shadow-color);
+
+        font-size: 120%;
 
         transition: box-shadow 0.2s ease-out;
 
@@ -1434,18 +1437,23 @@ p {
     font-size: 1.05em;
 }
 
-/* FIX ALBUM PARAGRAPHS */
+/* ALBUM CARDS */
 
 .album-card p {
     margin: 0;
     margin-block-start: 0.25em;
+
+    font-size: 110%
 }
 
 .album-card p:first-of-type {
     margin-block-start: 0.5em;
 }
 
+/* ICON EYEBROWS */
+
 .icon-eyebrow {
+    --icon-size: 1.25em;
     display: flex;
     align-items: center;
     gap: 0.25em;
@@ -1454,15 +1462,21 @@ p {
 
 .icon-eyebrow img {
     opacity: 0.4;
-    transform: translateY(-1px)
+    transform: translateY(-1px);
+    width: var(--icon-size);
+    height: var(--icon-size);
 }
 
-@media (width < 1025px) {
-    .icon-eyebrow img {
-        width: 17.5px;
-        height: 17.5px;
+/* @media (width < 768px) {
+
+    .icon-eyebrow {
+        --icon-size: 3em;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
     }
-}
+
+} */
 
 /* ANIMATION */
 

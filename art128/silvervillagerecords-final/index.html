@@ -18,9 +18,9 @@
 
   <!-- FANCYAPPS CAROUSEL -->
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/carousel/carousel.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/carousel/carousel.css">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/carousel/carousel.arrows.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/carousel/carousel.arrows.css">
 
   <link href="css/style.css" rel="stylesheet" type="text/css">
 
@@ -39,21 +39,21 @@
   <header class="site-header toggle-nav header-on-top-of-hero">
     <div class="site-logo">
       <a href="index.html">
-        <img class="fade-in-from-top" style="--delay: 0.25s" src="img/logo.svg" alt="Silver Village Records Logo"
-          width="40" height="35">
+        <img class="fade-in-from-top" style="--delay: 0.25s" src="img/logo.svg" alt="Logo" width="40" height="35">
       </a>
     </div>
     <nav class="site-navigation fade-in-from-top-desktop" style="--delay: 0.25s">
       <button class="menu-button navicon fade-in-from-top" style="--delay: 0.25s"><span>Menu</span></button>
       <ul>
-        <li><a href="#new-releases"><img src="img/new.svg" alt="New Releases" width="20" height="20"> NEW
+        <li><a href="#new-releases"><img src="img/new.svg" alt="" width="20" height="20"> NEW
             RELEASES</a></li>
-        <li><a href="#used-music"><img src="img/used.svg" alt="Used Music" width="20" height="20"> USED
+        <li><a href="#used-music"><img src="img/used.svg" alt="" width="20" height="20"> USED
             MUSIC</a></li>
-        <li><a href="#genres"><img src="img/genres.svg" alt="Genres" width="20" height="20"> GENRES</a></li>
-        <li><a href="#vinyl-care"><img src="img/vinylcare.svg" alt="Vinyl Care" width="20" height="20"> VINYL CARE</a>
+        <li><a href="#genres"><img src="img/genres.svg" alt="" width="20" height="20"> GENRES</a></li>
+        <li><a href="#vinyl-care"><img src="img/vinylcare.svg" alt="" width="20" height="20"> VINYL
+            CARE</a>
         </li>
-        <li><a href="#about"><img src="img/about.svg" alt="About Us" width="20" height="20"> ABOUT US</a></li>
+        <li><a href="#about"><img src="img/about.svg" alt="" width="20" height="20"> ABOUT US</a></li>
       </ul>
     </nav>
   </header>
@@ -72,7 +72,7 @@
 
         <div class="text-right">
           <div class="hero-eyebrow fade-in-from-right" style="--delay: 0.25s"> EST. 1998</div>
-          <h2 class="fade-in-from-right" style="--delay: 0.5s">groove in better company.</br>
+          <h2 class="fade-in-from-right" style="--delay: 0.5s">groove in better company.<br>
             groove with silver village.
           </h2>
         </div>
@@ -87,13 +87,17 @@
           <img src="img/herobackground.webp" alt="Hero Background">
         </div>
 
+      </div>
+
     </section>
 
     <section id="new-releases">
       <div class="container trigger-new-releases">
 
         <div class="featured-eyebrow icon-eyebrow trigger-animation-fade-in-new">FEATURED<img src="img/new-eyebrow.svg"
-            alt="New Releases" width="20" height="20"></div>
+            alt="New Releases Icon" width="20" height="20">
+        </div>
+
         <h2 class="trigger-animation-fade-in-new">NEW RELEASES</h2>
 
         <div class="row trigger-animation-slide-in-from-top-new">
@@ -139,8 +143,6 @@
 
       </div>
 
-      </div>
-
     </section>
 
     <section id="used-music">
@@ -148,7 +150,7 @@
       <div class="container trigger-pre-owned">
 
         <div class="used-eyebrow icon-eyebrow trigger-animation-fade-in"><img src="img/used-eyebrow.svg"
-            alt="Used Music" width="20" height="20">VINYL &
+            alt="Used Music Icon" width="20" height="20"> VINYL &
           CD</div>
         <h2 class="trigger-animation-fade-in">PRE-OWNED</h2>
 
@@ -266,7 +268,7 @@
       <div class="container trigger-genres">
 
         <div class="genre-eyebrow icon-eyebrow trigger-animation-fade-in-genres">SURF OUR BINS<img
-            src="img/genres-eyebrow.svg" alt="Genres" width="20" height="20"></div>
+            src="img/genres-eyebrow.svg" alt="Genres Icon" width="20" height="20"></div>
         <h2 class="trigger-animation-fade-in-genres">BROWSE BY GENRE</h2>
 
         <!-- Toggle Tabs Web Component from Chris Ferdinandi: https://gomakethings.com/snippets/web-components/toggle-tabs/ -->
@@ -274,7 +276,7 @@
         <link rel="stylesheet" href="components/toggle-tabs/toggle-tabs.css">
 
         <toggle-tabs class="trigger-animation-fade-in-genres">
-          <ul tabs>
+          <ul data-tabs>
             <li><a href="#rock">Rock</a></li>
             <li><a href="#hip-hop">Hip-Hop</a></li>
             <li><a href="#r-b">R&B</a></li>
@@ -1241,7 +1243,7 @@
       <div class="container trigger-vinyl-care">
 
         <div class="vinyl-care-eyebrow icon-eyebrow trigger-animation-fade-in-vinyl-care">PREMIUM QUALITY<img
-            src="img/vinylcare-eyebrow.svg" alt="Vinyl Care" width="20" height="20"></div>
+            src="img/vinylcare-eyebrow.svg" alt="Vinyl Care Icon" width="20" height="20"></div>
         <h2 class="trigger-animation-fade-in-vinyl-care">VINYL CARE SUPPLIES</h2>
 
         <div class="row box centered">
@@ -1250,7 +1252,7 @@
 
             <div class="album-card vinyl-care-card">
               <img class="box-shadowed" style="--box-shadow-color:#FD2C4F;" src="img/vinylspray.webp"
-                alt="Placeholder Image" width="600" height="600">
+                alt="Image of Record Cleaning Fluid" width="600" height="600">
 
               <p><strong>4oz Record Cleaning Fluid</strong></p>
               <p>$12.95</p>
@@ -1262,7 +1264,7 @@
 
             <div class="album-card vinyl-care-card">
               <img class="box-shadowed" style="--box-shadow-color:#F68422;" src="img/vinylbrush.avif"
-                alt="Placeholder Image" width="600" height="600">
+                alt="Image of Anti-Static Record Brush" width="600" height="600">
 
               <p><strong>Anti-Static Record Brush</strong></p>
               <p>$16.95</p>
@@ -1274,7 +1276,7 @@
 
             <div class="album-card vinyl-care-card">
               <img class="box-shadowed" style="--box-shadow-color:#E7E303;" src="img/washer.webp"
-                alt="Placeholder Image" width="600" height="600">
+                alt="Image of Deep Groove Record Washer" width="600" height="600">
 
               <p><strong>Deep Groove Record Washer</strong></p>
               <p>$79.95</p>
@@ -1295,7 +1297,7 @@
 
           <div class="two-thirds trigger-animation-slide-in-from-left-about">
 
-            <div class="about-eyebrow icon-eyebrow">ABOUT US<img src="img/about.svg" alt="About Us" width="20"
+            <div class="about-eyebrow icon-eyebrow">ABOUT US<img src="img/about.svg" alt="About Us Icon" width="20"
                 height="20"></div>
             <h2>it takes a village to spin a record.</h2>
 
@@ -1331,6 +1333,7 @@
 
       </div>
 
+    </div>
 
   </main>
 
@@ -1340,7 +1343,6 @@
       <div class="row trigger-animation-slide-in-from-bottom-footer">
         <div class="two-thirds two-col-mobile">
           <a href="index.html">
-            <img src="img/logo.svg" alt="Silver Village Records Logo" width="75" height="75">
             <h2>SILVER VILLAGE</h2>
             <h3>RECORDS</h3>
           </a>
