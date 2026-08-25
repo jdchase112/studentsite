@@ -131,7 +131,7 @@ body {
     font-size: clamp(1em, 4vw, 2.5em);
     color: rgb(200, 200, 200);
     font-weight: 500;
-    transform: translateX(1%)
+    transform: translateX(1%);
 }
 
 .hero h2 {
@@ -145,7 +145,8 @@ body {
     font-family: swiss721-blk-bt, sans-serif;
     font-weight: 500;
     font-style: normal;
-    color: rgb(230, 230, 230)
+    color: rgb(230, 230, 230);
+    letter-spacing: -0.075em;
 }
 
 .hero h3 {
