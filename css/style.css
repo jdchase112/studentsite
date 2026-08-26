@@ -81,6 +81,8 @@ header a:hover {
 
 .site-id h1 {
     margin: 0;
+    padding: 0 0 0 0.25em;
+    font-weight: 600;
 }
 
 /* SITE NAV */
@@ -108,7 +110,7 @@ header a:hover {
 /* BODY */
 
 body {
-    background-color: rgb(35, 35, 35);
+    background-color: rgb(25, 25, 25);
 }
 
 /* HERO SECTION */
@@ -125,6 +127,10 @@ body {
 .hero-container {
     max-width: 1000px;
     padding: 1em;
+
+    h2 {
+        letter-spacing: -0.07em;
+    }
 }
 
 .hero-eyebrow {
@@ -143,10 +149,10 @@ body {
     align-items: center;
     margin: 0;
     font-family: swiss721-blk-bt, sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     font-style: normal;
     color: rgb(230, 230, 230);
-    letter-spacing: -0.075em;
+    letter-spacing: -0.07em;
 }
 
 .hero h3 {
@@ -238,6 +244,14 @@ body {
 
 section {
     padding: 3em 1em;
+}
+
+.site-main {
+    background-color: rgb(35, 35, 35, );
+}
+
+.notes-main {
+    background-color: rgb(35, 35, 35);
 }
 
 aside {
