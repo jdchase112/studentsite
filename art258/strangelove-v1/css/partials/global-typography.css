@@ -1,0 +1,89 @@
+/* ---------------------------- 
+------ GLOBAL TYPOGRAPHY ------
+---------------------------- */
+
+/* SET DEFAULT FONT SIZE AND LINE HEIGHT */
+body {
+    font-family: var(--font-body);
+    font-size: 100%;
+    line-height: 1.3;
+}
+
+/* SET FONT AND WEIGHT FOR HEADINGS */
+h1,
+h2 {
+    font-family: var(--font-headings);
+    font-weight: 600;
+    margin: 0;
+}
+
+h3 {
+    font-family: var(--font-headings);
+    font-weight: 500;
+    margin: 0;
+}
+
+/* STYLING FOR HEADING 1 */
+h1 {
+    font-size: 3em;
+    margin-block-start: 1em;
+    line-height: 1;
+    color: var(--text-color-0);
+}
+
+/* STYLING FOR HEADING 2 */
+h2 {
+    font-size: 2em;
+    margin-block-start: 1em;
+    margin-block-end: 0.5em;
+    line-height: 1.1;
+    color: var(--text-color-1);
+}
+
+/* STYLING FOR HEADING 3 */
+h3 {
+    font-size: 1.5em;
+    margin-block-start: 1em;
+    margin-block-end: 0.5em;
+    line-height: 1.2;
+}
+
+/* STYLING FOR PARAGRAPHS */
+p {
+    margin-block-start: 0.5em;
+    margin-block-end: 1em;
+    text-wrap: pretty;
+}
+
+/* CODE BLOCKS */
+pre code {
+    font-family: monospace;
+    display: block;
+    background-color: var(--strangelove-secondary-background);
+    padding: var(--unit-small) var(--unit-medium) var(--unit-medium);
+    border-radius: 10px;
+    border: 1px solid #333A3A;
+    white-space: pre-wrap;
+}
+
+/* SECTION HEADING STYLING */
+
+.section-heading {
+    color: var(--text-color-1);
+    text-transform: uppercase;
+    font-family: var(--sans-serif), sans-serif;
+    font-weight: 600;
+    font-size: clamp(1.5em, 6vw, 3.125em);
+    margin-top: 0;
+    z-index: 2;
+    position: relative;
+}
+
+.section-eyebrow {
+    color: var(--strangelove-light-blue);
+    text-transform: uppercase;
+    font-family: var(--sans-serif), sans-serif;
+    font-weight: 500;
+    font-size: clamp(0.775em, 2.5vw, 1.125em);
+    margin-bottom: 0;
+}
